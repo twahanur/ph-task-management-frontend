@@ -231,7 +231,7 @@ function Sidebar({
       <div
         data-slot="sidebar-container"
         className={cn(
-          " sticky inset-y-0 z-10 hidden h-svh w-[220px] transition-[left,right,width] duration-200 ease-linear md:flex bg-white border-r border-slate-200/80 py-2",
+          "sticky inset-y-0 z-10 hidden h-svh w-[220px] transition-[left,right,width] duration-200 ease-linear md:flex bg-sidebar border-r border-sidebar-border py-2",
           side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
@@ -277,7 +277,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <ChevronFirst size={18} className="border border-[#707371]" />
+      <ChevronFirst size={18} className="border border-border" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

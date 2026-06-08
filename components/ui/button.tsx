@@ -8,16 +8,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        secondary: "text-gray-900",
-        destructive: "text-gray-900",
-        default: "text-gray-900",
-        red: "text-gray-900",
-        outline: "text-gray-900",
-        yellow: "text-gray-900",
-        ghost: "text-gray-900",
-        link: "text-gray-900 underline-offset-4 hover:underline",
-        purple: "text-gray-900",
-        green: "text-gray-900",
+        secondary: "text-foreground",
+        destructive: "text-foreground",
+        default: "text-foreground",
+        red: "text-foreground",
+        outline: "text-foreground",
+        yellow: "text-foreground",
+        ghost: "text-foreground",
+        link: "text-foreground underline-offset-4 hover:underline",
+        purple: "text-foreground",
+        green: "text-foreground",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -54,7 +54,7 @@ function Button({
     <Comp
       data-slot="button"
       className={cn(
-        "relative overflow-hidden text-gray-900",
+        "relative overflow-hidden text-foreground",
         buttonVariants({ variant, size, className })
       )}
       {...props}

@@ -17,7 +17,7 @@ export default function TeamPage() {
   // Invite workspace member states
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [inviteEmail, setInviteEmail] = useState("");
-  const [inviteRole, setInviteRole] = useState("member");
+  const [inviteRole, setInviteRole] = useState("team_member");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const popoverRef = useRef<HTMLDivElement>(null);
 
@@ -56,7 +56,7 @@ export default function TeamPage() {
     fetchWorkspaces();
   }, []);
 
-  const handleRoleChange = async (userId: string, newRole: "admin" | "member") => {
+  const handleRoleChange = async (userId: string, newRole: "admin" | "project_manager" | "team_member") => {
     if (selectedWorkspaceId === "all") return;
     setUpdatingUserId(userId);
     try {
@@ -131,7 +131,7 @@ export default function TeamPage() {
         toast.success(res.message || "Member added to workspace successfully!");
         setIsInviteOpen(false);
         setInviteEmail("");
-        setInviteRole("member");
+        setInviteRole("team_member");
         await fetchWorkspaces();
       } else {
         toast.error(res?.message || "Failed to invite member");
@@ -269,7 +269,8 @@ export default function TeamPage() {
                         onChange={(e) => setInviteRole(e.target.value)}
                         className="w-full silver-input rounded-lg px-2.5 py-2 text-xs focus:outline-none cursor-pointer"
                       >
-                        <option value="member">Member</option>
+                        <option value="team_member">Team Member</option>
+                        <option value="project_manager">Project Manager</option>
                         <option value="admin">Admin</option>
                       </select>
                     </div>
@@ -419,7 +420,8 @@ export default function TeamPage() {
                                 disabled={updatingUserId === member.user.id}
                                 className="silver-input rounded-lg px-2 py-1 text-xs focus:outline-none cursor-pointer transition disabled:opacity-50 font-semibold"
                               >
-                                <option value="member">Member</option>
+                                <option value="team_member">Team Member</option>
+                                <option value="project_manager">Project Manager</option>
                                 <option value="admin">Admin</option>
                               </select>
                             </div>

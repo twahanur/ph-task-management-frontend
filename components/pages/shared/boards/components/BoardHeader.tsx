@@ -28,7 +28,7 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
   const [starred, setStarred] = useState(board.isStarred);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [inviteEmail, setInviteEmail] = useState("");
-  const [inviteRole, setInviteRole] = useState("member");
+  const [inviteRole, setInviteRole] = useState("team_member");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const popoverRef = useRef<HTMLDivElement>(null);
   const { can } = useRole();
@@ -92,7 +92,7 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
         toast.success(res.message || "Member invited to board successfully!");
         setIsInviteOpen(false);
         setInviteEmail("");
-        setInviteRole("member");
+        setInviteRole("team_member");
       } else {
         toast.error(res?.message || "Failed to invite member");
       }
@@ -236,7 +236,8 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
                         <SelectValue placeholder="Select role" />
                       </SelectTrigger>
                       <SelectContent className="silver-metallic border-gray-300 text-gray-850">
-                        <SelectItem value="member" className="text-xs focus:bg-gray-100 focus:text-gray-900">Member</SelectItem>
+                        <SelectItem value="team_member" className="text-xs focus:bg-gray-100 focus:text-gray-900">Team Member</SelectItem>
+                        <SelectItem value="project_manager" className="text-xs focus:bg-gray-100 focus:text-gray-900">Project Manager</SelectItem>
                         <SelectItem value="admin" className="text-xs focus:bg-gray-100 focus:text-gray-900">Admin</SelectItem>
                       </SelectContent>
                     </Select>

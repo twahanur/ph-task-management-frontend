@@ -96,7 +96,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
   // Member Form States
   const [memberWorkspaceId, setMemberWorkspaceId] = useState("");
   const [memberEmail, setMemberEmail] = useState("");
-  const [memberRole, setMemberRole] = useState("member");
+  const [memberRole, setMemberRole] = useState("team_member");
   const [isAddingMember, setIsAddingMember] = useState(false);
 
   // Fetch workspaces when opening Task or Member modals
@@ -173,7 +173,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
     setIsMemberModalOpen(true);
     setMemberWorkspaceId("");
     setMemberEmail("");
-    setMemberRole("member");
+    setMemberRole("team_member");
     await fetchWorkspacesForForms();
   };
 
@@ -268,7 +268,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
         toast.success(res.message || "Member added successfully!", { id: toastId });
         setIsMemberModalOpen(false);
         setMemberEmail("");
-        setMemberRole("member");
+        setMemberRole("team_member");
         // Redirect to team page
         router.push("/dashboard/team");
       } else {
@@ -1378,7 +1378,8 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
                   onChange={(e) => setMemberRole(e.target.value)}
                   className="w-full h-[56px] silver-input rounded-[16px] px-4 pr-10 cursor-pointer appearance-none"
                 >
-                  <option value="member" className="bg-gray-100 text-gray-800">Member</option>
+                  <option value="team_member" className="bg-gray-100 text-gray-800">Team Member</option>
+                  <option value="project_manager" className="bg-gray-100 text-gray-800">Project Manager</option>
                   <option value="admin" className="bg-gray-100 text-gray-800">Admin</option>
                 </select>
                 <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500">

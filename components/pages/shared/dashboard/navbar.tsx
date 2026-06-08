@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
 import NotificationBell from "../boards/components/NotificationBell";
+import { ModeToggle } from "../ModeToggle";
 
 const Navbar: React.FC = () => {
   const { state, isMobile } = useSidebar();
@@ -83,6 +84,7 @@ const Navbar: React.FC = () => {
             </Button>
           </div>
           <div className="flex items-center gap-4">
+            <ModeToggle />
             <NotificationBell />
 
             <Popover>

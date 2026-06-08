@@ -15,11 +15,11 @@ import { useUser } from "@/provider/AuthProvider";
 import { logout } from "@/service/authService";
 import { motion } from "framer-motion";
 import { LayoutDashboard, LogOut, Menu } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import { toast } from "sonner";
+import { ModeToggle } from "../ModeToggle";
 
 export type TSocialUser = {
   name: string;
@@ -28,7 +28,6 @@ export type TSocialUser = {
 };
 
 export default function Navbar() {
-  const pathname = usePathname();
   const router = useRouter();
   const { user, setIsLoading, setUser, isLoading } = useUser();
 
@@ -55,21 +54,14 @@ export default function Navbar() {
     }
   };
 
-  const NavLinks = [
-    // { title: "Plans", path: "/plans" },
-    // { title: "Solutions", path: "/solutions" },
-    // { title: "Pricing", path: "/pricing" },
-    // { title: "Resources", path: "/resources" },
-  ];
-
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={cn(
-        "fixed max-w-full w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 ",
-        "text-white",
+        "fixed max-w-full w-full z-50 bgGlass border-b border-border",
+        "text-foreground",
       )}
     >
       <div className="max-w-[1444px] mx-auto px-4 ">
@@ -77,10 +69,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-yellow-400 font-bold text-xl flex items-center gap-2"
+            className="text-primary font-bold text-xl flex items-center gap-2"
           >
-            <span className="text-white font-extrabold tracking-wider">
-              PH <span className="text-violet-500">TASKS</span>
+            <span className="text-foreground font-extrabold tracking-wider">
+              PH <span className="text-primary">TASKS</span>
             </span>
           </Link>
 
@@ -103,20 +95,21 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-2">
+            <ModeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-yellow-400">
+                <Button variant="ghost" size="icon" className="text-primary">
                   <Menu size={24} />
                 </Button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-[#030115] border-white/10 text-white w-[300px] p-0 flex flex-col"
+                className="bg-popover border-border text-popover-foreground w-[300px] p-0 flex flex-col"
               >
                 <SheetHeader className="text-left pt-6 px-8 mb-4">
                   <SheetTitle>
-                    <span className="text-white font-extrabold tracking-wider">
-                      PH <span className="text-violet-500">TASKS</span>
+                    <span className="text-foreground font-extrabold tracking-wider">
+                      PH <span className="text-primary">TASKS</span>
                     </span>
                   </SheetTitle>
                 </SheetHeader>
@@ -139,16 +132,16 @@ export default function Navbar() {
                     ))}
                   </div> */}
 
-                  <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
+                  <div className="pt-6 border-t border-border flex flex-col gap-4">
                     {isLoading ? (
                       <div className="h-20 flex items-center justify-center">
-                        <div className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+                        <div className="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin" />
                       </div>
                     ) : user ? (
                       <>
                         <Link
                           href="/dashboard"
-                          className="flex items-center gap-3 text-base font-semibold text-yellow-400 hover:translate-x-1 transition-transform"
+                          className="flex items-center gap-3 text-base font-semibold text-primary hover:translate-x-1 transition-transform"
                         >
                           <LayoutDashboard size={20} />
                           Dashboard
@@ -186,6 +179,7 @@ export default function Navbar() {
           </div>
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
+            <ModeToggle />
             {user ? (
               <>
                 <Link href="/dashboard">

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AppSidebar } from "@/components/pages/shared/dashboard/sidebar/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
@@ -36,8 +35,8 @@ export default async function RootLayout({
         antialiased 
         relative 
         min-h-screen 
-        bg-[#f5f6f8]
-        text-slate-800`}
+        bg-background
+        text-foreground`}
     >
       {/* Layout Structure */}
       <div className="max-w-360 mx-auto relative">

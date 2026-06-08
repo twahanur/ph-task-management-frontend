@@ -23,7 +23,7 @@ export interface WorkspaceMember {
   id: string;
   workspace_id: string;
   user_id: string;
-  role: 'owner' | 'member' | 'admin';
+  role: 'owner' | 'admin' | 'project_manager' | 'team_member';
   joined_at: string;
   user: WorkspaceUser;
 }

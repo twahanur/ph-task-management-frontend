@@ -39,10 +39,17 @@ export default function RootLayout({
         <Provider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="theme-sapphire"
+            themes={[
+              "theme-sapphire",
+              "theme-silver",
+              "theme-metal",
+              "theme-aurora",
+              "theme-amber",
+              "theme-amber-dark",
+            ]}
             enableSystem={false}
             disableTransitionOnChange
-            forcedTheme="dark"
           >
             <div>{children}</div>
 
