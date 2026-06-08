@@ -146,7 +146,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-200">
       {/* Header Greet and Actions */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 silver-metallic p-6 rounded-2xl border border-gray-300 shadow-sm">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <span className="silver-btn text-gray-700 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
@@ -154,10 +154,10 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
               Audit Log
             </span>
           </div>
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
+          <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
             RECENT ACTIVITY LOG
           </h1>
-          <p className="text-slate-400 text-sm">
+          <p className="text-gray-600 text-sm">
             Monitor and track changes made across your workspaces, projects, boards, and checklist items.
           </p>
         </div>
@@ -166,11 +166,11 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1: Total Activities */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Total Activities</span>
-            <h3 className="text-3xl font-extrabold text-slate-800">{metrics.total}</h3>
-            <p className="text-xs text-slate-500">Workspace updates logged</p>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Total Activities</span>
+            <h3 className="text-3xl font-extrabold text-gray-800">{metrics.total}</h3>
+            <p className="text-xs text-gray-600">Workspace updates logged</p>
           </div>
           <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <Activity size={24} />
@@ -178,11 +178,11 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
         </div>
 
         {/* Metric 2: Completion Logged */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Items Completed</span>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Items Completed</span>
             <h3 className="text-3xl font-extrabold text-gray-700">{metrics.completed}</h3>
-            <p className="text-xs text-slate-500">Checklist milestones reached</p>
+            <p className="text-xs text-gray-600">Checklist milestones reached</p>
           </div>
           <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <CheckCircle2 size={24} />
@@ -190,13 +190,13 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
         </div>
 
         {/* Metric 3: Creations & Updates */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Created / Updated</span>
-            <h3 className="text-3xl font-extrabold text-slate-800">
+            <span className="text-[10px] uppercase font-bold text-gray-500">Created / Updated</span>
+            <h3 className="text-3xl font-extrabold text-gray-800">
               {metrics.created + metrics.updated}
             </h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               {metrics.created} created · {metrics.updated} modified
             </p>
           </div>
@@ -206,21 +206,21 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
         </div>
 
         {/* Metric 4: Top Contributor */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Top Contributor</span>
-            <h3 className="text-lg font-bold text-slate-800 truncate max-w-[150px]">
+            <span className="text-[10px] uppercase font-bold text-gray-500">Top Contributor</span>
+            <h3 className="text-lg font-bold text-gray-800 truncate max-w-[150px]">
               {metrics.topUser.name}
             </h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               Logged {metrics.topUser.count} activities
             </p>
           </div>
-          <Avatar className="w-12 h-12 rounded-2xl border border-slate-100 flex-shrink-0">
+          <Avatar className="w-12 h-12 rounded-2xl border border-gray-300 flex-shrink-0">
             {metrics.topUser.avatar ? (
               <AvatarImage src={metrics.topUser.avatar} />
             ) : (
-              <span className="flex items-center justify-center font-bold text-sm uppercase w-full h-full bg-slate-200 text-slate-600 rounded-2xl">
+              <span className="flex items-center justify-center font-bold text-sm uppercase w-full h-full silver-input text-gray-700 rounded-2xl">
                 {metrics.topUser.name.slice(0, 2).toUpperCase()}
               </span>
             )}
@@ -229,14 +229,14 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
       </div>
 
       {/* Main Container: Filter Toolbar & Timeline */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col p-6 space-y-6">
+      <div className="silver-metallic rounded-2xl border border-gray-300 shadow-sm overflow-hidden flex flex-col p-6 space-y-6">
         
         {/* Filters Toolbar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-gray-300">
           
           {/* Search Box */}
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" size={16} />
             <input 
               type="text"
               placeholder="Search by action description, user, or board..."
@@ -245,15 +245,15 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition"
+              className="w-full pl-10 pr-4 py-2 text-sm silver-input border border-gray-300 text-gray-800 rounded-xl focus:outline-none transition"
             />
           </div>
 
           {/* Select Options */}
           <div className="flex flex-wrap items-center gap-3">
             {/* Filter Action Type */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-600">
-              <Filter size={12} className="text-slate-400" />
+            <div className="flex items-center gap-1.5 silver-input border border-gray-300 px-3 py-1.5 rounded-xl text-xs text-gray-700">
+              <Filter size={12} className="text-gray-500" />
               <select
                 value={selectedActionType}
                 onChange={(e) => {
@@ -271,8 +271,8 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
             </div>
 
             {/* Filter Entity Type */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-600">
-              <Layout size={12} className="text-slate-400" />
+            <div className="flex items-center gap-1.5 silver-input border border-gray-300 px-3 py-1.5 rounded-xl text-xs text-gray-700">
+              <Layout size={12} className="text-gray-500" />
               <select
                 value={selectedEntityType}
                 onChange={(e) => {
@@ -298,7 +298,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                   setSelectedEntityType("all");
                   setCurrentPage(1);
                 }}
-                className="flex items-center gap-1 text-xs text-gray-700 hover:text-gray-700 font-semibold px-2 py-1.5 rounded-xl hover:silver-btn transition cursor-pointer"
+                className="flex items-center gap-1 text-xs text-gray-700 font-semibold px-2 py-1.5 rounded-xl silver-btn transition cursor-pointer"
               >
                 <RefreshCw size={11} />
                 Reset Filters
@@ -308,12 +308,12 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
         </div>
 
         {/* Timeline List */}
-        <div className="relative border-l border-slate-200 pl-6 ml-4 space-y-8 py-2 min-h-[300px]">
+        <div className="relative border-l border-gray-300 pl-6 ml-4 space-y-8 py-2 min-h-[300px]">
           {paginatedActivities.length === 0 ? (
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 -ml-4">
-              <Activity size={32} className="text-slate-300 mb-2 animate-bounce" />
-              <p className="text-sm font-semibold text-slate-500">No activity matches the current filters</p>
-              <p className="text-xs text-slate-400">Try broadening your search criteria.</p>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500 -ml-4">
+              <Activity size={32} className="text-gray-400 mb-2 animate-bounce" />
+              <p className="text-sm font-semibold text-gray-600">No activity matches the current filters</p>
+              <p className="text-xs text-gray-500">Try broadening your search criteria.</p>
             </div>
           ) : (
             paginatedActivities.map((activity: any) => {
@@ -323,21 +323,21 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
               return (
                 <div key={activity.id} className="relative flex items-start gap-4 animate-in fade-in slide-in-from-left-2 duration-200">
                   {/* Timeline bullet icon */}
-                  <span className={`absolute -left-[35px] top-1.5 w-7 h-7 rounded-full flex items-center justify-center border-2 border-white shadow-sm font-bold ${styles.iconBg}`}>
+                  <span className={`absolute -left-[35px] top-1.5 w-7 h-7 rounded-full flex items-center justify-center border-2 border-gray-300 shadow-sm font-bold ${styles.iconBg}`}>
                     {styles.icon}
                   </span>
 
                   {/* Activity Details Card */}
-                  <div className="flex-1 bg-slate-50/50 hover:bg-slate-50 p-4 rounded-2xl border border-slate-150 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex-1 silver-input hover:bg-gray-200/30 p-4 rounded-2xl border border-gray-300 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
                     
                     {/* Log details */}
                     <div className="flex items-start gap-3.5">
                       {/* User Avatar */}
-                      <Avatar className="w-10 h-10 rounded-xl border border-slate-200 shadow-sm shrink-0">
+                      <Avatar className="w-10 h-10 rounded-xl border border-gray-300 shadow-sm shrink-0">
                         {activity.user?.avatar_url ? (
                           <AvatarImage src={activity.user.avatar_url} />
                         ) : (
-                          <span className="flex items-center justify-center font-bold text-xs uppercase w-full h-full bg-slate-200 text-slate-600 rounded-xl">
+                          <span className="flex items-center justify-center font-bold text-xs uppercase w-full h-full silver-metallic text-gray-700 rounded-xl">
                             {initials}
                           </span>
                         )}
@@ -346,28 +346,28 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                       {/* Log text content */}
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-bold text-slate-800 text-sm">{activity.user?.name}</span>
+                          <span className="font-bold text-gray-800 text-sm">{activity.user?.name}</span>
                           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${styles.bg} capitalize`}>
                             {activity.action_type}
                           </span>
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200 uppercase tracking-wide">
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full silver-metallic text-gray-700 border border-gray-300 uppercase tracking-wide">
                             {activity.entity_type}
                           </span>
                         </div>
-                        <p className="text-slate-700 text-xs leading-relaxed font-semibold">
+                        <p className="text-gray-700 text-xs leading-relaxed font-semibold">
                           {activity.description}
                         </p>
                         {activity.board && (
-                          <p className="text-[10px] text-slate-400 font-medium">
-                            Project Board: <span className="font-semibold text-slate-500">"{activity.board.name}"</span>
+                          <p className="text-[10px] text-gray-500 font-medium">
+                            Project Board: <span className="font-semibold text-gray-600">"{activity.board.name}"</span>
                           </p>
                         )}
                       </div>
                     </div>
 
                     {/* Timestamp */}
-                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-slate-400 shrink-0 md:text-right mt-1 md:mt-0">
-                      <Clock size={12} className="text-slate-300" />
+                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-gray-500 shrink-0 md:text-right mt-1 md:mt-0">
+                      <Clock size={12} className="text-gray-400" />
                       <span>{formatDate(activity.created_at)}</span>
                     </div>
 
@@ -380,16 +380,16 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
 
         {/* Pagination Controls */}
         {filteredActivities.length > 0 && (
-          <div className="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
-            <span className="text-slate-400 font-medium">
-              Showing <span className="font-semibold text-slate-600">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-slate-600">{Math.min(currentPage * itemsPerPage, filteredActivities.length)}</span> of <span className="font-semibold text-slate-600">{filteredActivities.length}</span> activities
+          <div className="flex items-center justify-between pt-4 border-t border-gray-300 text-xs">
+            <span className="text-gray-600 font-medium">
+              Showing <span className="font-semibold text-gray-800">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-gray-800">{Math.min(currentPage * itemsPerPage, filteredActivities.length)}</span> of <span className="font-semibold text-gray-800">{filteredActivities.length}</span> activities
             </span>
 
             <div className="flex items-center gap-1">
               <button 
                 onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                 disabled={currentPage === 1}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl silver-btn text-gray-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 <ChevronLeft size={14} />
                 Previous
@@ -398,10 +398,9 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
               <div className="flex items-center gap-1">
                 {Array.from({ length: totalPages }).map((_, idx) => {
                   const pNum = idx + 1;
-                  // Show current page, first, last, and pages around current
                   if (totalPages > 5 && pNum !== 1 && pNum !== totalPages && Math.abs(currentPage - pNum) > 1) {
                     if (pNum === 2 || pNum === totalPages - 1) {
-                      return <span key={pNum} className="px-1 text-slate-400">...</span>;
+                      return <span key={pNum} className="px-1 text-gray-500">...</span>;
                     }
                     return null;
                   }
@@ -410,9 +409,9 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                       key={pNum}
                       onClick={() => setCurrentPage(pNum)}
                       className={`w-7.5 h-7.5 rounded-xl flex items-center justify-center font-bold transition cursor-pointer ${
-                        currentPage === pNum 
-                          ? "silver-btn text-white shadow-sm shadow-gray-300" 
-                          : "bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100"
+                        currentPage === pNum
+                          ? "silver-btn text-gray-800 shadow-sm"
+                          : "silver-input border border-gray-300 text-gray-600 hover:silver-btn"
                       }`}
                     >
                       {pNum}
@@ -424,7 +423,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
               <button 
                 onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl silver-btn text-gray-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 Next
                 <ChevronRight size={14} />

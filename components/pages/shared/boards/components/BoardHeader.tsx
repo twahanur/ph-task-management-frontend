@@ -254,6 +254,9 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
       </div>
 
       <div className="flex items-center gap-2">
+        {/* Notification Bell */}
+        <NotificationBell />
+
         {/* Share Button */}
         <button className="silver-btn flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-lg transition duration-150 active:scale-95 cursor-pointer shadow-sm">
           <Share2 size={13} className="stroke-[2.5px]" />

@@ -80,9 +80,9 @@ export default function BoardCard({
           onDrop(e, card.id, card.list_id);
         }
       }}
-      className={`bg-white hover:bg-gray-50/80 text-gray-800 p-3.5 rounded-xl shadow-sm hover:shadow-md cursor-grab active:cursor-grabbing group transition-all duration-200 hover:-translate-y-0.5 border ${
+      className={`silver-metallic text-gray-800 p-3.5 rounded-xl shadow-sm hover:shadow-md cursor-grab active:cursor-grabbing group transition-all duration-200 hover:-translate-y-0.5 border ${
         card.status === "completed"
-          ? "border-gray-300 silver-btn hover:silver-btn"
+          ? "border-gray-300"
           : "border-gray-300 hover:border-gray-400"
       } ${isDragging ? "opacity-30 scale-95 border-gray-400" : ""} ${
         draggedOver ? "border-t-2 border-t-gray-500 pt-5 mt-1" : ""

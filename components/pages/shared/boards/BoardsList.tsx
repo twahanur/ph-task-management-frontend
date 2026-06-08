@@ -334,8 +334,12 @@ export default function BoardsList({ boards, workspaceId }: { boards: TBoard[], 
             ))}
             
             {(!localBoards || localBoards.length === 0) && (
-                <div className="col-span-full py-12 text-center text-gray-500 border border-dashed border-gray-300 rounded-xl bg-gray-50/50">
-                    No boards found. Create a new board to get started!
+                <div className="col-span-full py-16 text-center silver-metallic border border-dashed border-gray-400 rounded-2xl flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 silver-input rounded-xl flex items-center justify-center">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" className="text-gray-500"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    </div>
+                    <p className="text-sm font-semibold text-gray-700">No boards yet</p>
+                    <p className="text-xs text-gray-500">Create your first board to get started.</p>
                 </div>
             )}
         </div>

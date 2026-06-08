@@ -25,8 +25,8 @@ export default function WorkspaceTopBar({ workspaceName, workspaceId, boardCount
         
         {/* Current workspace */}
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 bg-gray-750 rounded flex items-center justify-center">
-            <LayoutGrid size={12} className="text-gray-100" />
+          <div className="w-6 h-6 silver-btn rounded flex items-center justify-center">
+            <LayoutGrid size={12} className="text-gray-700" />
           </div>
           <h1 className="text-sm font-semibold text-gray-850">{workspaceName}</h1>
           {boardCount !== undefined && (

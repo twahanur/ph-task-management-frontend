@@ -86,7 +86,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-200">
       {/* Header Greet */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 silver-metallic p-6 rounded-2xl border border-gray-300 shadow-sm">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <span className="silver-btn text-gray-700 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
@@ -94,10 +94,10 @@ export default function TasksMain({ initialData }: TasksMainProps) {
               Task Center
             </span>
           </div>
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
+          <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
             MY TASKS
           </h1>
-          <p className="text-slate-400 text-sm">
+          <p className="text-gray-600 text-sm">
             View, filter, and track all tasks assigned to you across all project boards.
           </p>
         </div>
@@ -106,11 +106,11 @@ export default function TasksMain({ initialData }: TasksMainProps) {
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1: Total Tasks */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Total Tasks</span>
-            <h3 className="text-3xl font-extrabold text-slate-800">{stats.total}</h3>
-            <p className="text-xs text-slate-500">Assigned across all boards</p>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Total Tasks</span>
+            <h3 className="text-3xl font-extrabold text-gray-800">{stats.total}</h3>
+            <p className="text-xs text-gray-600">Assigned across all boards</p>
           </div>
           <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <Layers size={24} />
@@ -118,11 +118,11 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         </div>
 
         {/* Metric 2: Completed Tasks */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Completed</span>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Completed</span>
             <h3 className="text-3xl font-extrabold text-gray-700">{stats.completed}</h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               {stats.completionRate}% completion rate
             </p>
           </div>
@@ -132,13 +132,13 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         </div>
 
         {/* Metric 3: Pending & In Progress */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Active Tasks</span>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Active Tasks</span>
             <h3 className="text-3xl font-extrabold text-gray-700">
               {stats.inProgress + stats.todo}
             </h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               {stats.inProgress} in progress · {stats.todo} todo
             </p>
           </div>
@@ -148,29 +148,29 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         </div>
 
         {/* Metric 4: Overdue */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
+        <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] uppercase font-bold text-slate-400">Overdue Tasks</span>
-            <h3 className={`text-3xl font-extrabold ${stats.overdue > 0 ? "text-gray-700" : "text-slate-800"}`}>
+            <span className="text-[10px] uppercase font-bold text-gray-500">Overdue Tasks</span>
+            <h3 className={`text-3xl font-extrabold ${stats.overdue > 0 ? "text-gray-700" : "text-gray-800"}`}>
               {stats.overdue}
             </h3>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-gray-600">
               {stats.overdue > 0 ? "Action required immediately" : "All deadlines on track"}
             </p>
           </div>
-          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${stats.overdue > 0 ? "silver-btn text-gray-700" : "bg-slate-50 text-slate-400"}`}>
+          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${stats.overdue > 0 ? "silver-btn text-gray-700" : "silver-input text-gray-500"}`}>
             <AlertCircle size={24} />
           </div>
         </div>
       </div>
 
       {/* Task Listing & Filters */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col p-6 space-y-6">
+      <div className="silver-metallic rounded-2xl border border-gray-300 shadow-sm overflow-hidden flex flex-col p-6 space-y-6">
         {/* Filters Toolbar */}
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4 pb-4 border-b border-gray-300">
           {/* Search Box */}
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" size={16} />
             <input 
               type="text"
               placeholder="Search tasks by title or description..."
@@ -179,15 +179,15 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition"
+              className="w-full pl-10 pr-4 py-2 text-sm silver-input border border-gray-300 text-gray-800 rounded-xl focus:outline-none transition"
             />
           </div>
 
           {/* Select Options */}
           <div className="flex flex-wrap items-center gap-3">
             {/* Filter Status */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-600">
-              <Filter size={12} className="text-slate-400" />
+            <div className="flex items-center gap-1.5 silver-input border border-gray-300 px-3 py-1.5 rounded-xl text-xs text-gray-700">
+              <Filter size={12} className="text-gray-500" />
               <select
                 value={selectedStatus}
                 onChange={(e) => {
@@ -204,15 +204,15 @@ export default function TasksMain({ initialData }: TasksMainProps) {
             </div>
 
             {/* Filter Priority */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-600">
-              <Filter size={12} className="text-slate-400" />
+            <div className="flex items-center gap-1.5 silver-input border border-gray-300 px-3 py-1.5 rounded-xl text-xs text-gray-700">
+              <Filter size={12} className="text-gray-500" />
               <select
                 value={selectedPriority}
                 onChange={(e) => {
                   setSelectedPriority(e.target.value);
                   setCurrentPage(1);
                 }}
-                className="bg-transparent font-medium focus:outline-none cursor-pointer text-slate-600"
+                className="bg-transparent font-medium focus:outline-none cursor-pointer text-gray-700"
               >
                 <option value="all">All Priorities</option>
                 <option value="high">High</option>
@@ -222,15 +222,15 @@ export default function TasksMain({ initialData }: TasksMainProps) {
             </div>
 
             {/* Filter Board */}
-            <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs text-slate-600">
-              <Filter size={12} className="text-slate-400" />
+            <div className="flex items-center gap-1.5 silver-input border border-gray-300 px-3 py-1.5 rounded-xl text-xs text-gray-700">
+              <Filter size={12} className="text-gray-500" />
               <select
                 value={selectedBoard}
                 onChange={(e) => {
                   setSelectedBoard(e.target.value);
                   setCurrentPage(1);
                 }}
-                className="bg-transparent font-medium focus:outline-none cursor-pointer text-slate-600"
+                className="bg-transparent font-medium focus:outline-none cursor-pointer text-gray-700"
               >
                 <option value="all">All Boards</option>
                 {boardsList.map(b => (
@@ -249,7 +249,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                   setSelectedBoard("all");
                   setCurrentPage(1);
                 }}
-                className="flex items-center gap-1 text-xs text-gray-700 hover:text-gray-700 font-semibold px-2 py-1.5 rounded-xl hover:silver-btn transition cursor-pointer"
+                className="flex items-center gap-1 text-xs text-gray-700 font-semibold px-2 py-1.5 rounded-xl silver-btn transition cursor-pointer"
               >
                 <RefreshCw size={11} />
                 Reset Filters
@@ -262,7 +262,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         <div className="overflow-x-auto no-scrollbar">
           <table className="w-full text-left border-collapse text-xs">
             <thead>
-              <tr className="text-slate-400 font-bold uppercase text-[10px] border-b border-slate-100 pb-2.5">
+              <tr className="text-gray-600 font-bold uppercase text-[10px] border-b border-gray-300 pb-2.5">
                 <th className="py-3 px-3">Task Title</th>
                 <th className="py-3 px-3">Board & List</th>
                 <th className="py-3 px-3 text-center">Priority</th>
@@ -272,11 +272,11 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                 <th className="py-3 px-3 text-right">Metrics</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
+            <tbody className="divide-y divide-gray-300 font-medium text-gray-700">
               {paginatedTasks.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="py-10 text-center text-slate-450">
-                    <AlertCircle size={24} className="mx-auto text-slate-300 mb-2 animate-bounce" />
+                  <td colSpan={7} className="py-10 text-center text-gray-500">
+                    <AlertCircle size={24} className="mx-auto text-gray-400 mb-2 animate-bounce" />
                     No task records found matching the criteria.
                   </td>
                 </tr>
@@ -290,43 +290,31 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                     year: "numeric"
                   }) : "No due date";
 
-                  // Priority styles
-                  let priorityBadge = "";
-                  if (task.priority === "high") {
-                    priorityBadge = "text-gray-700 silver-btn border-gray-300";
-                  } else if (task.priority === "medium") {
-                    priorityBadge = "text-gray-700 silver-btn border-gray-300";
-                  } else {
-                    priorityBadge = "text-slate-600 bg-slate-50 border-slate-200";
-                  }
+                  const priorityBadge = task.priority === "low"
+                    ? "text-gray-600 silver-input border-gray-300"
+                    : "text-gray-700 silver-btn border-gray-300";
 
-                  // Status styles
-                  let statusBadge = "";
-                  if (task.status === "completed") {
-                    statusBadge = "text-gray-700 silver-btn border-gray-300";
-                  } else if (task.status === "in_progress") {
-                    statusBadge = "text-gray-700 silver-btn border-gray-300";
-                  } else {
-                    statusBadge = "text-slate-600 bg-slate-50 border-slate-200";
-                  }
+                  const statusBadge = task.status === "todo"
+                    ? "text-gray-600 silver-input border-gray-300"
+                    : "text-gray-700 silver-btn border-gray-300";
 
                   return (
-                    <tr key={task.id} className="hover:bg-slate-50/50 transition">
+                    <tr key={task.id} className="hover:bg-gray-200/30 transition">
                       {/* Title & Description */}
                       <td className="py-4 px-3 max-w-[200px]">
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-bold text-slate-800 text-sm truncate">{task.title}</span>
+                          <span className="font-bold text-gray-800 text-sm truncate">{task.title}</span>
                           {task.description && (
-                            <span className="text-[11px] text-slate-400 truncate">{task.description}</span>
+                            <span className="text-[11px] text-gray-500 truncate">{task.description}</span>
                           )}
                         </div>
                       </td>
 
                       {/* Board & List details */}
-                      <td className="py-4 px-3 text-slate-500 font-medium">
+                      <td className="py-4 px-3 text-gray-600 font-medium">
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-bold text-slate-700 text-xs">{task.board?.name}</span>
-                          <span className="text-[10px] text-slate-400 font-semibold">{task.list?.name}</span>
+                          <span className="font-bold text-gray-700 text-xs">{task.board?.name}</span>
+                          <span className="text-[10px] text-gray-500 font-semibold">{task.list?.name}</span>
                         </div>
                       </td>
 
@@ -347,8 +335,8 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                       {/* Due Date */}
                       <td className="py-4 px-3 font-semibold">
                         <div className="flex items-center gap-1.5">
-                          <Calendar size={13} className={isOverdue ? "text-gray-700" : "text-slate-400"} />
-                          <span className={isOverdue ? "text-gray-700 font-bold" : "text-slate-500"}>
+                          <Calendar size={13} className={isOverdue ? "text-gray-700" : "text-gray-500"} />
+                          <span className={isOverdue ? "text-gray-700 font-bold" : "text-gray-600"}>
                             {formattedDueDate}
                             {isOverdue && <span className="text-[9px] uppercase ml-1.5 font-extrabold px-1.5 py-0.5 silver-btn border border-gray-300 rounded text-gray-700">Overdue</span>}
                           </span>
@@ -362,7 +350,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                             const name = m.user?.name || "User";
                             const initials = name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase();
                             return (
-                              <Avatar key={m.id} className="w-7 h-7 rounded-full border-2 border-white shadow-sm ring-1 ring-slate-200">
+                              <Avatar key={m.id} className="w-7 h-7 rounded-full border-2 border-gray-300 shadow-sm">
                                 <AvatarImage src={m.user?.avatar_url} />
                                 <AvatarFallback className="text-[10px] font-bold silver-btn text-gray-700">
                                   {initials}
@@ -371,7 +359,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                             );
                           })}
                           {task.members?.length > 3 && (
-                            <div className="w-7 h-7 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-slate-500 ring-1 ring-slate-200 shrink-0">
+                            <div className="w-7 h-7 rounded-full silver-input border-2 border-gray-300 flex items-center justify-center text-[9px] font-bold text-gray-600 shrink-0">
                               +{task.members.length - 3}
                             </div>
                           )}
@@ -380,7 +368,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
 
                       {/* Comments & Attachments */}
                       <td className="py-4 px-3 text-right">
-                        <div className="flex items-center justify-end gap-3 text-slate-400 font-bold">
+                        <div className="flex items-center justify-end gap-3 text-gray-500 font-bold">
                           <span className="flex items-center gap-1 text-[11px]" title="Comments count">
                             <MessageSquare size={13} />
                             {task._count?.comments || 0}
@@ -401,16 +389,16 @@ export default function TasksMain({ initialData }: TasksMainProps) {
 
         {/* Pagination Controls */}
         {filteredTasks.length > 0 && (
-          <div className="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
-            <span className="text-slate-400 font-medium">
-              Showing <span className="font-semibold text-slate-600">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-slate-600">{Math.min(currentPage * itemsPerPage, filteredTasks.length)}</span> of <span className="font-semibold text-slate-600">{filteredTasks.length}</span> tasks
+          <div className="flex items-center justify-between pt-4 border-t border-gray-300 text-xs">
+            <span className="text-gray-600 font-medium">
+              Showing <span className="font-semibold text-gray-800">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-semibold text-gray-800">{Math.min(currentPage * itemsPerPage, filteredTasks.length)}</span> of <span className="font-semibold text-gray-800">{filteredTasks.length}</span> tasks
             </span>
 
             <div className="flex items-center gap-1">
               <button 
                 onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                 disabled={currentPage === 1}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl silver-btn text-gray-700 hover:silver-btn transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 <ChevronLeft size={14} />
                 Previous
@@ -425,8 +413,8 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                       onClick={() => setCurrentPage(pNum)}
                       className={`w-7.5 h-7.5 rounded-xl flex items-center justify-center font-bold transition cursor-pointer ${
                         currentPage === pNum 
-                          ? "silver-btn text-white shadow-sm shadow-gray-300" 
-                          : "bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100"
+                          ? "silver-btn text-gray-800 shadow-sm" 
+                          : "silver-input border border-gray-300 text-gray-600 hover:silver-btn"
                       }`}
                     >
                       {pNum}
@@ -438,7 +426,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
               <button 
                 onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-xl silver-btn text-gray-700 hover:silver-btn transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
               >
                 Next
                 <ChevronRight size={14} />
