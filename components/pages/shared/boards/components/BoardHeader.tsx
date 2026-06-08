@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { useRole } from "@/hooks/useRole";
 
 interface BoardHeaderProps {
   board: any;
@@ -30,6 +31,7 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
   const [inviteRole, setInviteRole] = useState("member");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const popoverRef = useRef<HTMLDivElement>(null);
+  const { can } = useRole();
 
   // Close popover when clicking outside
   useEffect(() => {
@@ -190,9 +192,10 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
           </div>
           <div className="relative" ref={popoverRef}>
             <button 
-              onClick={() => setIsInviteOpen(!isInviteOpen)}
-              className="w-8 h-8 rounded-full silver-metallic border border-gray-300 flex items-center justify-center text-gray-500 hover:text-gray-755 transition active:scale-95 cursor-pointer"
-              title="Invite member"
+              onClick={() => can("ADD_MEMBER") && setIsInviteOpen(!isInviteOpen)}
+              disabled={!can("ADD_MEMBER")}
+              title={!can("ADD_MEMBER") ? "Only Admin or Project Manager can invite members" : "Invite member"}
+              className="w-8 h-8 rounded-full silver-metallic border border-gray-300 flex items-center justify-center text-gray-500 hover:text-gray-755 transition active:scale-95 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <UserPlus size={13} />
             </button>

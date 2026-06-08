@@ -52,6 +52,7 @@ import { toast } from "sonner";
 import { createWorkspace, getAllWorkspaces, addWorkspaceMember } from "@/service/workspaceService/workspace.service";
 import { getBoardsByWorkspaceId, getBoardById } from "@/service/boardService/board.service";
 import { createCard } from "@/service/listService/list.service";
+import { useRole } from "@/hooks/useRole";
 
 
 interface DashboardMainProps {
@@ -60,6 +61,7 @@ interface DashboardMainProps {
 
 export default function DashboardMain({ initialData }: DashboardMainProps) {
   const { user } = useUser();
+  const { can } = useRole();
   const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
 
@@ -388,22 +390,28 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <button 
-            onClick={() => setIsProjectModalOpen(true)}
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm"
+            onClick={() => can("CREATE_PROJECT") && setIsProjectModalOpen(true)}
+            disabled={!can("CREATE_PROJECT")}
+            title={!can("CREATE_PROJECT") ? "Only Admin or Project Manager can create projects" : undefined}
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Plus size={16} />
             NEW PROJECT
           </button>
           <button 
-            onClick={() => openTaskModal()}
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm"
+            onClick={() => can("CREATE_TASK") && openTaskModal()}
+            disabled={!can("CREATE_TASK")}
+            title={!can("CREATE_TASK") ? "Only Admin or Project Manager can create tasks" : undefined}
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Plus size={16} />
             NEW TASK
           </button>
           <button 
-            onClick={() => openMemberModal()}
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm"
+            onClick={() => can("ADD_MEMBER") && openMemberModal()}
+            disabled={!can("ADD_MEMBER")}
+            title={!can("ADD_MEMBER") ? "Only Admin or Project Manager can add members" : undefined}
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-xl silver-btn cursor-pointer shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Users size={16} />
             ADD MEMBER

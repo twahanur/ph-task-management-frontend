@@ -4,6 +4,7 @@
 
 import React, { useState } from "react";
 import { AlignLeft, MessageSquare, Paperclip, CheckSquare, Clock } from "lucide-react";
+import { useRole } from "@/hooks/useRole";
 
 interface BoardCardProps {
   card: any;
@@ -26,6 +27,7 @@ export default function BoardCard({
 }: BoardCardProps) {
   const [draggedOver, setDraggedOver] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
+  const { can } = useRole();
   
   // Check if due date is overdue
   const isOverdue = card.due_date ? new Date(card.due_date) < new Date() : false;
@@ -128,8 +130,8 @@ export default function BoardCard({
       <div className="flex items-start gap-2.5 mb-3.5">
         <button
           onClick={async (e) => {
-            e.stopPropagation(); // Stop click from bubbling to the card div (which opens the modal)
-            if (isUpdating) return;
+            e.stopPropagation();
+            if (isUpdating || !can("UPDATE_OWN_STATUS")) return;
             setIsUpdating(true);
             try {
               await onComplete(card.id, card.status || "todo");
@@ -137,15 +139,15 @@ export default function BoardCard({
               setIsUpdating(false);
             }
           }}
-          disabled={isUpdating}
+          disabled={isUpdating || !can("UPDATE_OWN_STATUS")}
           className={`w-4.5 h-4.5 rounded-full border flex-shrink-0 flex items-center justify-center transition-all mt-0.5 cursor-pointer ${
-            isUpdating
-              ? "border-gray-400 bg-transparent cursor-not-allowed"
+            isUpdating || !can("UPDATE_OWN_STATUS")
+              ? "border-gray-400 bg-transparent cursor-not-allowed opacity-40"
               : card.status === "completed"
               ? "silver-btn border-gray-300 text-white hover:silver-btn hover:border-gray-300"
               : "border-gray-400 hover:border-gray-300 bg-transparent hover:silver-btn"
           }`}
-          title={card.status === "completed" ? "Mark as incompleted" : "Mark as completed"}
+          title={!can("UPDATE_OWN_STATUS") ? "You don't have permission to update task status" : (card.status === "completed" ? "Mark as incompleted" : "Mark as completed")}
         >
           {isUpdating ? (
             <svg className="animate-spin h-2.5 w-2.5 text-slate-450" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

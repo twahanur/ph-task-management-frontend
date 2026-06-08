@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MessageSquare, Send, CornerDownRight } from "lucide-react";
+import { useRole } from "@/hooks/useRole";
 
 interface User {
     name?: string;
@@ -40,6 +41,7 @@ export default function CardComments({
     const [activeReplyId, setActiveReplyId] = useState<string | null>(null);
     const [isSubmittingComment, setIsSubmittingComment] = useState(false);
     const [submittingReplyId, setSubmittingReplyId] = useState<string | null>(null);
+    const { can } = useRole();
 
     const handleCommentSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -83,9 +85,10 @@ export default function CardComments({
                     <textarea 
                         value={commentText}
                         onChange={(e) => setCommentText(e.target.value)}
-                        disabled={isSubmittingComment}
+                        disabled={isSubmittingComment || !can("COMMENT")}
+                        title={!can("COMMENT") ? "You don't have permission to comment" : undefined}
                         className="w-full silver-input text-gray-850 rounded-lg p-2.5 text-sm resize-none focus:outline-none transition h-10 focus:h-20 disabled:opacity-50"
-                        placeholder="Write a comment..."
+                        placeholder={can("COMMENT") ? "Write a comment..." : "Commenting not allowed for your role"}
                     />
                     {commentText.trim() && (
                         <button

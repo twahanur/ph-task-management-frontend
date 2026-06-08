@@ -16,9 +16,11 @@ import ButtonComponent from "@/components/ui/ButtonComponent";
 import { Plus } from "lucide-react";
 import { toast } from 'sonner';
 import { createWorkspace } from '@/service/workspaceService/workspace.service';
+import { useRole } from '@/hooks/useRole';
 
 export default function AddProject() {
   const [isOpen, setIsOpen] = useState(false);
+  const { can } = useRole();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,7 +46,11 @@ export default function AddProject() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition text-sm shadow-sm silver-btn">
+        <button
+          disabled={!can("CREATE_PROJECT")}
+          title={!can("CREATE_PROJECT") ? "Only Admin or Project Manager can create projects" : undefined}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition text-sm shadow-sm silver-btn disabled:opacity-40 disabled:cursor-not-allowed"
+        >
           <Plus size={18} />
           Create Project
         </button>

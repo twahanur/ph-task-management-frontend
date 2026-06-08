@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import { MoreHorizontal, Plus, X } from "lucide-react";
+import { useRole } from "@/hooks/useRole";
 import BoardCard from "./BoardCard";
 
 interface BoardListProps {
@@ -38,6 +39,7 @@ export default function BoardList({
 }: BoardListProps) {
   const isAddingCard = addingCardToListId === list.id;
   const [listDraggedOver, setListDraggedOver] = useState(false);
+  const { can } = useRole();
 
   return (
     <div className="silver-metallic rounded-2xl w-72 flex-shrink-0 max-h-full flex flex-col border border-gray-300 shadow-lg">
@@ -146,8 +148,10 @@ export default function BoardList({
       ) : (
         <div className="p-2.5 pt-1.5 border-t border-gray-200">
           <button
-            onClick={() => setAddingCardToListId(list.id)}
-            className="flex items-center gap-2 text-xs font-semibold text-gray-550 hover:text-gray-855 hover:bg-gray-200/50 w-full p-2.5 rounded-xl transition-all group cursor-pointer"
+            onClick={() => can("CREATE_TASK") && setAddingCardToListId(list.id)}
+            disabled={!can("CREATE_TASK")}
+            title={!can("CREATE_TASK") ? "Only Admin or Project Manager can create tasks" : undefined}
+            className="flex items-center gap-2 text-xs font-semibold text-gray-550 hover:text-gray-855 hover:bg-gray-200/50 w-full p-2.5 rounded-xl transition-all group cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <Plus size={15} />
             <span>Add a card</span>

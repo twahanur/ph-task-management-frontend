@@ -17,6 +17,7 @@ import CardLabelsPopover from "./components/CardLabelsPopover";
 import CardCustomFields from "./components/CardCustomFields";
 import CardAttachments from "./components/CardAttachments";
 import { uploadAttachment, deleteAttachment } from "@/service/attachmentService/attachment.service";
+import { useRole } from "@/hooks/useRole";
 
 interface CardDetailsModalProps {
     card: any;
@@ -27,6 +28,7 @@ interface CardDetailsModalProps {
 
 export default function CardDetailsModal({ card, board, projectId, onClose }: CardDetailsModalProps) {
     const { user } = useUser();
+    const { can } = useRole();
 
     // Find the latest card data from the board prop
     const cardFromBoard = board.lists
@@ -646,8 +648,9 @@ export default function CardDetailsModal({ card, board, projectId, onClose }: Ca
                                      </span>
                                      <select
                                          value={status}
-                                         disabled={isUpdatingStatus}
+                                         disabled={isUpdatingStatus || !can("UPDATE_OWN_STATUS")}
                                          onChange={(e) => handleUpdateStatus(e.target.value)}
+                                         title={!can("UPDATE_OWN_STATUS") ? "You don't have permission to update status" : undefined}
                                          className="silver-input border-gray-300 text-gray-800 rounded-lg text-xs px-3 py-1.5 focus:outline-none transition cursor-pointer font-semibold disabled:opacity-50"
                                      >
                                          <option value="todo">To Do</option>
@@ -715,8 +718,9 @@ export default function CardDetailsModal({ card, board, projectId, onClose }: Ca
                             />
                             
                             <button 
-                                onClick={() => fileInputRef.current?.click()}
-                                disabled={isUploading}
+                                onClick={() => can("UPLOAD_FILE") && fileInputRef.current?.click()}
+                                disabled={isUploading || !can("UPLOAD_FILE")}
+                                title={!can("UPLOAD_FILE") ? "You don't have permission to upload files" : undefined}
                                 className="flex items-center gap-2 silver-btn px-3 py-1.5 rounded text-sm transition cursor-pointer disabled:opacity-50"
                             >
                                 <Paperclip size={16} className={isUploading ? "animate-spin" : ""} />

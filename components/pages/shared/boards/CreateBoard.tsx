@@ -24,11 +24,13 @@ import { Plus } from "lucide-react";
 import { toast } from 'sonner';
 import { createBoard } from '@/service/boardService/board.service';
 import { TCreateBoardPayload } from '@/types/baordType/board.type';
+import { useRole } from '@/hooks/useRole';
 
 export default function CreateBoard({ workspaceId }: { workspaceId: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#3B82F6");
   const [visibility, setVisibility] = useState("public");
+  const { can } = useRole();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,7 +58,11 @@ export default function CreateBoard({ workspaceId }: { workspaceId: string }) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-2 px-4 py-2 rounded-full font-medium transition text-sm silver-btn">
+        <button
+          disabled={!can("CREATE_PROJECT")}
+          title={!can("CREATE_PROJECT") ? "Only Admin or Project Manager can create boards" : undefined}
+          className="flex items-center gap-2 px-4 py-2 rounded-full font-medium transition text-sm silver-btn disabled:opacity-40 disabled:cursor-not-allowed"
+        >
           <Plus size={18} />
           Create Board
         </button>
