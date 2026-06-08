@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "7d2f9b8c-1e2a-4a5b-9c8d-3e4f5a6b7c8d",
+		"name": "Reminder Policies API",
+		"description": "Collection for managing Reminder Policies, including grouped summaries for admins.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Policies",
+			"item": [
+				{
+					"name": "Create Birthday Summary Policy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Admin Birthday Digest (2 Days)\",\n  \"triggerType\": \"BIRTHDAY\",\n  \"leadTimeDays\": 2,\n  \"isSummary\": true,\n  \"summaryRecipientId\": 1,\n  \"assigneeType\": \"ADMIN\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/reminders/policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reminders",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Anniversary Summary Policy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Admin Marriage Anniversary Digest (2 Days)\",\n  \"triggerType\": \"MARRIAGE_ANNIVERSARY\",\n  \"leadTimeDays\": 2,\n  \"isSummary\": true,\n  \"summaryRecipientId\": 1,\n  \"assigneeType\": \"ADMIN\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/reminders/policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reminders",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Policies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/reminders/policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reminders",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Policy",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Policy Name\",\n  \"isActive\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/reminders/policies/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reminders",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Policy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/reminders/policies/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reminders",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

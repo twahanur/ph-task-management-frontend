@@ -1,0 +1,532 @@
+
+> optiluxbd-crm-frontend@0.1.0 build
+> next build
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/rjannat/MASTARY/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/rjannat/MASTARY/project-for-boot-camp/b-frontend/pnpm-lock.yaml
+
+   ▲ Next.js 16.0.7 (Turbopack)
+   - Experiments (use with caution):
+     · serverActions
+
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+
+> Build error occurred
+Error: Turbopack build failed with 26 errors:
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/profile/loading.tsx:1:1
+Module not found: Can't resolve '../settings/user-management/[id]/loading'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mUserDetailsLoading[39m [36mfrom[39m [32m"../settings/user-management/[id]/loading"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mconst[39m loading [33m=[39m () [33m=>[39m {
+ [90m 4 |[39m   [36mreturn[39m [33m<[39m[33mUserDetailsLoading[39m isDouble[33m=[39m{[36mfalse[39m}[33m/[39m[33m>[39m[33m;[39m[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/page.tsx:1:1
+Module not found: Can't resolve '@/components/pages/dashboard/activityLog/allActivity/ActivityLog'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mActivityLogs[39m [36mfrom[39m [32m"@/components/pages/dashboard/activityLog/allActivity/ActivityLog"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m { metaData } [36mfrom[39m [32m"@/constants/const.meta"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { getAuditStatistics[33m,[39m getRecentLogs } [36mfrom[39m [32m"@/service/logs"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/pages/dashboard/activityLog/allActivity/ActivityLog' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/page.tsx:1:1
+Module not found: Can't resolve '@/components/pages/dashboard/activityLog/usersActivity/UserActions'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mUserActions[39m [36mfrom[39m [32m"@/components/pages/dashboard/activityLog/usersActivity/UserActions"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m { metaData } [36mfrom[39m [32m"@/constants/const.meta"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { getUserActions } [36mfrom[39m [32m"@/service/logs"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/pages/dashboard/activityLog/usersActivity/UserActions' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:1:1
+Module not found: Can't resolve '@/components/pages/home/PricingSection'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mPricingSection[39m [36mfrom[39m [32m"@/components/pages/home/PricingSection"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m [33mPricingSkeleton[39m [36mfrom[39m [32m"@/components/pages/home/PricingSkeleton"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mSuspense[39m } [36mfrom[39m [32m"react"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/pages/home/PricingSection' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:2:1
+Module not found: Can't resolve '@/components/pages/home/PricingSkeleton'
+[0m [90m 1 |[39m [36mimport[39m [33mPricingSection[39m [36mfrom[39m [32m"@/components/pages/home/PricingSection"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mPricingSkeleton[39m [36mfrom[39m [32m"@/components/pages/home/PricingSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mSuspense[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './components/pages/home/PricingSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:1:1
+Module not found: Can't resolve '@/components/pages/payment/SubscribeInterface'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33mSubscribeInterface[39m [36mfrom[39m [32m"@/components/pages/payment/SubscribeInterface"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m { getMyOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { getPlanById } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/pages/payment/SubscribeInterface' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:4:1
+Module not found: Can't resolve '@/components/ui/TableSkeleton'
+[0m [90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mUserActionDetailsLoading[39m [33m=[39m () [33m=>[39m {
+ [90m 7 |[39m   [36mreturn[39m ([0m
+
+Import map: aliased to relative './components/ui/TableSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:4:1
+Module not found: Can't resolve '@/components/ui/TableSkeleton'
+[0m [90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mActivityLogLoading[39m [33m=[39m () [33m=>[39m {
+ [90m 7 |[39m   [36mreturn[39m ([0m
+
+Import map: aliased to relative './components/ui/TableSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(auth)/reset-password/loading.tsx:1:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mconst[39m loading [33m=[39m () [33m=>[39m {
+ [90m 4 |[39m   [36mreturn[39m ([0m
+
+Import map: aliased to relative './components/ui/skeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:2:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './components/ui/skeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:2:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './components/ui/skeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx:4:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mChartSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton/ChartSkeleton"[39m[33m;[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mconst[39m [33mTabSkeleton[39m [33m=[39m () [33m=>[39m ([0m
+
+Import map: aliased to relative './components/ui/skeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Client Component Browser]
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Server Component]
+
+  Client Component SSR:
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Client Component SSR]
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/ui/sidebar.tsx:21:1
+Module not found: Can't resolve '@/components/ui/skeleton'
+[0m [90m 19 |[39m   [33mSheetTitle[39m[33m,[39m
+ [90m 20 |[39m } [36mfrom[39m [32m"@/components/ui/sheet"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 21 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 22 |[39m [36mimport[39m {
+ [90m 23 |[39m   [33mTooltip[39m[33m,[39m
+ [90m 24 |[39m   [33mTooltipContent[39m[33m,[39m[0m
+
+Import map: aliased to relative './components/ui/skeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/ui/sidebar.tsx
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx:5:1
+Module not found: Can't resolve '@/components/ui/skeleton/ChartSkeleton'
+[0m [90m 3 |[39m [36mimport[39m { [33mCard[39m[33m,[39m [33mCardContent[39m[33m,[39m [33mCardHeader[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mChartSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton/ChartSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mconst[39m [33mTabSkeleton[39m [33m=[39m () [33m=>[39m (
+ [90m 8 |[39m   [33m<[39m[33mdiv[39m className[33m=[39m[32m"grid grid-cols-2 gap-2 w-full"[39m[33m>[39m[0m
+
+Import map: aliased to relative './components/ui/skeleton/ChartSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import traces:
+  Client Component Browser:
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Client Component Browser]
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Server Component]
+
+  Client Component SSR:
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Client Component SSR]
+    ./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:3:1
+Module not found: Can't resolve '@/components/ui/skeleton/PageHeaderSkeleton'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mUserActionDetailsLoading[39m [33m=[39m () [33m=>[39m {[0m
+
+Import map: aliased to relative './components/ui/skeleton/PageHeaderSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:3:1
+Module not found: Can't resolve '@/components/ui/skeleton/PageHeaderSkeleton'
+[0m [90m 1 |[39m [36mimport[39m { [33mCard[39m } [36mfrom[39m [32m"@/components/ui/card"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { [33mSkeleton[39m } [36mfrom[39m [32m"@/components/ui/skeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mPageHeaderSkeleton[39m [36mfrom[39m [32m"@/components/ui/skeleton/PageHeaderSkeleton"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m [33mTableSkeleton[39m [36mfrom[39m [32m"@/components/ui/TableSkeleton"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mActivityLogLoading[39m [33m=[39m () [33m=>[39m {[0m
+
+Import map: aliased to relative './components/ui/skeleton/PageHeaderSkeleton' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:2:1
+Module not found: Can't resolve '@/service/OrganaizationService'
+[0m [90m 1 |[39m [36mimport[39m [33mSubscribeInterface[39m [36mfrom[39m [32m"@/components/pages/payment/SubscribeInterface"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { getMyOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { getPlanById } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './service/OrganaizationService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:26:1
+Module not found: Can't resolve '@/service/OrganaizationService'
+[0m [90m 24 |[39m   validateCouponCode[33m,[39m
+ [90m 25 |[39m } [36mfrom[39m [32m"@/service/coupon/couonService"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 26 |[39m [36mimport[39m { createOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 28 |[39m [36mimport[39m { initiatePayment } [36mfrom[39m [32m"@/service/sslCommerze/ssl"[39m[33m;[39m
+ [90m 29 |[39m [36mimport[39m {[0m
+
+Import map: aliased to relative './service/OrganaizationService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx
+    ./project-for-boot-camp/b-frontend/app/(auth)/register/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:22:1
+Module not found: Can't resolve '@/service/coupon/couonService'
+[0m [90m 20 |[39m   [33mSelectValue[39m[33m,[39m
+ [90m 21 |[39m } [36mfrom[39m [32m"@/components/ui/select"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 22 |[39m [36mimport[39m {
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 23 |[39m   calculatePrice[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 24 |[39m   validateCouponCode[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 25 |[39m } [36mfrom[39m [32m"@/service/coupon/couonService"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { createOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 28 |[39m [36mimport[39m { initiatePayment } [36mfrom[39m [32m"@/service/sslCommerze/ssl"[39m[33m;[39m[0m
+
+Import map: aliased to relative './service/coupon/couonService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx
+    ./project-for-boot-camp/b-frontend/app/(auth)/register/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/page.tsx:3:1
+Module not found: Can't resolve '@/service/logs'
+[0m [90m 1 |[39m [36mimport[39m [33mUserActions[39m [36mfrom[39m [32m"@/components/pages/dashboard/activityLog/usersActivity/UserActions"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { metaData } [36mfrom[39m [32m"@/constants/const.meta"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getUserActions } [36mfrom[39m [32m"@/service/logs"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mUserActionDetailsPage[39m [33m=[39m [36masync[39m ({[0m
+
+Import map: aliased to relative './service/logs' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/page.tsx:3:1
+Module not found: Can't resolve '@/service/logs'
+[0m [90m 1 |[39m [36mimport[39m [33mActivityLogs[39m [36mfrom[39m [32m"@/components/pages/dashboard/activityLog/allActivity/ActivityLog"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { metaData } [36mfrom[39m [32m"@/constants/const.meta"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getAuditStatistics[33m,[39m getRecentLogs } [36mfrom[39m [32m"@/service/logs"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m [33mActivityLogPage[39m [33m=[39m [36masync[39m ({[0m
+
+Import map: aliased to relative './service/logs' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:3:1
+Module not found: Can't resolve '@/service/planService'
+[0m [90m 1 |[39m [36mimport[39m [33mSubscribeInterface[39m [36mfrom[39m [32m"@/components/pages/payment/SubscribeInterface"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m { getMyOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getPlanById } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { [33mTSearchParams[39m } [36mfrom[39m [32m"@/types/shared"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mSubscribe[39m({[0m
+
+Import map: aliased to relative './service/planService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:3:1
+Module not found: Can't resolve '@/service/planService'
+[0m [90m 1 |[39m [36mimport[39m [33mPricingSection[39m [36mfrom[39m [32m"@/components/pages/home/PricingSection"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mPricingSkeleton[39m [36mfrom[39m [32m"@/components/pages/home/PricingSkeleton"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m { [33mSuspense[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m page [33m=[39m [36masync[39m () [33m=>[39m {[0m
+
+Import map: aliased to relative './service/planService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:27:1
+Module not found: Can't resolve '@/service/planService'
+[0m [90m 25 |[39m } [36mfrom[39m [32m"@/service/coupon/couonService"[39m[33m;[39m
+ [90m 26 |[39m [36mimport[39m { createOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 27 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 28 |[39m [36mimport[39m { initiatePayment } [36mfrom[39m [32m"@/service/sslCommerze/ssl"[39m[33m;[39m
+ [90m 29 |[39m [36mimport[39m {
+ [90m 30 |[39m   [33mOrgFormValues[39m[33m,[39m[0m
+
+Import map: aliased to relative './service/planService' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx
+    ./project-for-boot-camp/b-frontend/app/(auth)/register/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:28:1
+Module not found: Can't resolve '@/service/sslCommerze/ssl'
+[0m [90m 26 |[39m [36mimport[39m { createOrganization } [36mfrom[39m [32m"@/service/OrganaizationService"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 28 |[39m [36mimport[39m { initiatePayment } [36mfrom[39m [32m"@/service/sslCommerze/ssl"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 29 |[39m [36mimport[39m {
+ [90m 30 |[39m   [33mOrgFormValues[39m[33m,[39m
+ [90m 31 |[39m   orgSchema[33m,[39m[0m
+
+Import map: aliased to relative './service/sslCommerze/ssl' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx
+    ./project-for-boot-camp/b-frontend/app/(auth)/register/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:29:1
+Module not found: Can't resolve '@/types/organization/organization.type'
+[0m [90m 27 |[39m [36mimport[39m { getAllPlan } [36mfrom[39m [32m"@/service/planService"[39m[33m;[39m
+ [90m 28 |[39m [36mimport[39m { initiatePayment } [36mfrom[39m [32m"@/service/sslCommerze/ssl"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 29 |[39m [36mimport[39m {
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 30 |[39m   [33mOrgFormValues[39m[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 31 |[39m   orgSchema[33m,[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 32 |[39m } [36mfrom[39m [32m"@/types/organization/organization.type"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 33 |[39m [36mimport[39m { [33mTPlan[39m } [36mfrom[39m [32m"@/types/plans/plans.type"[39m[33m;[39m
+ [90m 34 |[39m [36mimport[39m { debounce } [36mfrom[39m [32m"@/utills/debounce"[39m[33m;[39m
+ [90m 35 |[39m [36mimport[39m { zodResolver } [36mfrom[39m [32m"@hookform/resolvers/zod"[39m[33m;[39m[0m
+
+Import map: aliased to relative './types/organization/organization.type' inside of [project]/project-for-boot-camp/b-frontend
+
+
+Import trace:
+  Server Component:
+    ./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx
+    ./project-for-boot-camp/b-frontend/app/(auth)/register/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/profile/loading.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(auth)/reset-password/loading.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/ui/sidebar.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/loading.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/loading.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/loading.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/[id]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(dashboard)/dashboard/activity-log/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/payment/subscribe/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/app/(home)/plans/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:27:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:28:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./project-for-boot-camp/b-frontend/components/auth/register/organization/OrganizationRegisterForm.tsx:29:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

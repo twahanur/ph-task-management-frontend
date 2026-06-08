@@ -1,0 +1,58 @@
+### Variables
+@baseUrl = https://optiluxbd-server.vercel.app/api/v1
+@adminEmail = admin@gmail.com
+@adminPassword = Password@123
+
+### 1. Login as Admin (Get Access Token)
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{adminEmail}}",
+  "password": "{{adminPassword}}"
+}
+
+### Extract access token from login response
+@accessToken = {{login.response.body.data.token}}
+
+### 2. List All Customers
+GET {{baseUrl}}/customers
+Authorization: Bearer {{accessToken}}
+
+### 3. Create New Customer
+POST {{baseUrl}}/customers
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "name": "Test Customers",
+  "phone": "01777777777"
+}
+
+
+### 7. Test Invalid Request - Missing required field (name)
+POST {{baseUrl}}/roles
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "description": "Missing name field"
+}
+
+### 8. Test Invalid Request - Missing permissions array
+POST {{baseUrl}}/roles
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "name": "TEST_ROLE",
+  "description": "Test role without permissions"
+}
+
+### 9. Test Unauthorized Access (No Token)
+GET {{baseUrl}}/roles
+
+### 10. Test Unauthorized Access (Invalid Token)
+GET {{baseUrl}}/roles
+Authorization: Bearer invalid_token_here
