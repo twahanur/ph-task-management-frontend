@@ -89,7 +89,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="bg-blue-50 text-blue-600 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+            <span className="silver-btn text-gray-700 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
               <ListTodo size={12} />
               Task Center
             </span>
@@ -112,7 +112,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
             <h3 className="text-3xl font-extrabold text-slate-800">{stats.total}</h3>
             <p className="text-xs text-slate-500">Assigned across all boards</p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <Layers size={24} />
           </div>
         </div>
@@ -121,12 +121,12 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-bold text-slate-400">Completed</span>
-            <h3 className="text-3xl font-extrabold text-emerald-600">{stats.completed}</h3>
+            <h3 className="text-3xl font-extrabold text-gray-700">{stats.completed}</h3>
             <p className="text-xs text-slate-500">
               {stats.completionRate}% completion rate
             </p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <CheckCircle2 size={24} />
           </div>
         </div>
@@ -135,14 +135,14 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-bold text-slate-400">Active Tasks</span>
-            <h3 className="text-3xl font-extrabold text-amber-500">
+            <h3 className="text-3xl font-extrabold text-gray-700">
               {stats.inProgress + stats.todo}
             </h3>
             <p className="text-xs text-slate-500">
               {stats.inProgress} in progress · {stats.todo} todo
             </p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <Clock size={24} />
           </div>
         </div>
@@ -151,14 +151,14 @@ export default function TasksMain({ initialData }: TasksMainProps) {
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-bold text-slate-400">Overdue Tasks</span>
-            <h3 className={`text-3xl font-extrabold ${stats.overdue > 0 ? "text-rose-600" : "text-slate-800"}`}>
+            <h3 className={`text-3xl font-extrabold ${stats.overdue > 0 ? "text-gray-700" : "text-slate-800"}`}>
               {stats.overdue}
             </h3>
             <p className="text-xs text-slate-500">
               {stats.overdue > 0 ? "Action required immediately" : "All deadlines on track"}
             </p>
           </div>
-          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${stats.overdue > 0 ? "bg-rose-50 text-rose-500" : "bg-slate-50 text-slate-400"}`}>
+          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${stats.overdue > 0 ? "silver-btn text-gray-700" : "bg-slate-50 text-slate-400"}`}>
             <AlertCircle size={24} />
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
+              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition"
             />
           </div>
 
@@ -249,7 +249,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                   setSelectedBoard("all");
                   setCurrentPage(1);
                 }}
-                className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-500 font-semibold px-2 py-1.5 rounded-xl hover:bg-blue-50 transition cursor-pointer"
+                className="flex items-center gap-1 text-xs text-gray-700 hover:text-gray-700 font-semibold px-2 py-1.5 rounded-xl hover:silver-btn transition cursor-pointer"
               >
                 <RefreshCw size={11} />
                 Reset Filters
@@ -293,9 +293,9 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                   // Priority styles
                   let priorityBadge = "";
                   if (task.priority === "high") {
-                    priorityBadge = "text-rose-600 bg-rose-50 border-rose-200";
+                    priorityBadge = "text-gray-700 silver-btn border-gray-300";
                   } else if (task.priority === "medium") {
-                    priorityBadge = "text-amber-600 bg-amber-50 border-amber-200";
+                    priorityBadge = "text-gray-700 silver-btn border-gray-300";
                   } else {
                     priorityBadge = "text-slate-600 bg-slate-50 border-slate-200";
                   }
@@ -303,9 +303,9 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                   // Status styles
                   let statusBadge = "";
                   if (task.status === "completed") {
-                    statusBadge = "text-emerald-600 bg-emerald-50 border-emerald-200";
+                    statusBadge = "text-gray-700 silver-btn border-gray-300";
                   } else if (task.status === "in_progress") {
-                    statusBadge = "text-blue-600 bg-blue-50 border-blue-200";
+                    statusBadge = "text-gray-700 silver-btn border-gray-300";
                   } else {
                     statusBadge = "text-slate-600 bg-slate-50 border-slate-200";
                   }
@@ -347,10 +347,10 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                       {/* Due Date */}
                       <td className="py-4 px-3 font-semibold">
                         <div className="flex items-center gap-1.5">
-                          <Calendar size={13} className={isOverdue ? "text-rose-500" : "text-slate-400"} />
-                          <span className={isOverdue ? "text-rose-600 font-bold" : "text-slate-500"}>
+                          <Calendar size={13} className={isOverdue ? "text-gray-700" : "text-slate-400"} />
+                          <span className={isOverdue ? "text-gray-700 font-bold" : "text-slate-500"}>
                             {formattedDueDate}
-                            {isOverdue && <span className="text-[9px] uppercase ml-1.5 font-extrabold px-1.5 py-0.5 bg-rose-50 border border-rose-200 rounded text-rose-500">Overdue</span>}
+                            {isOverdue && <span className="text-[9px] uppercase ml-1.5 font-extrabold px-1.5 py-0.5 silver-btn border border-gray-300 rounded text-gray-700">Overdue</span>}
                           </span>
                         </div>
                       </td>
@@ -364,7 +364,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                             return (
                               <Avatar key={m.id} className="w-7 h-7 rounded-full border-2 border-white shadow-sm ring-1 ring-slate-200">
                                 <AvatarImage src={m.user?.avatar_url} />
-                                <AvatarFallback className="text-[10px] font-bold bg-blue-50 text-blue-600">
+                                <AvatarFallback className="text-[10px] font-bold silver-btn text-gray-700">
                                   {initials}
                                 </AvatarFallback>
                               </Avatar>
@@ -425,7 +425,7 @@ export default function TasksMain({ initialData }: TasksMainProps) {
                       onClick={() => setCurrentPage(pNum)}
                       className={`w-7.5 h-7.5 rounded-xl flex items-center justify-center font-bold transition cursor-pointer ${
                         currentPage === pNum 
-                          ? "bg-blue-600 text-white shadow-sm shadow-blue-100" 
+                          ? "silver-btn text-white shadow-sm shadow-gray-300" 
                           : "bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100"
                       }`}
                     >

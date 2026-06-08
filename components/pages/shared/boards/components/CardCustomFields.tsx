@@ -88,7 +88,7 @@ function FieldValueEditor({
             return <span className="text-gray-400 italic text-xs">—</span>;
         if (field.type === "checkbox")
             return currentValue === "true"
-                ? <span className="text-emerald-600 text-xs font-semibold">✓ Yes</span>
+                ? <span className="text-gray-700 text-xs font-semibold">✓ Yes</span>
                 : <span className="text-gray-400 text-xs">✗ No</span>;
         if (field.type === "date") {
             try {
@@ -111,7 +111,7 @@ function FieldValueEditor({
                 title={checked ? "Mark as No" : "Mark as Yes"}
             >
                 <div className={`w-4 h-4 rounded border flex items-center justify-center transition-all ${
-                    checked ? "bg-emerald-500 border-emerald-600" : "border-gray-300 bg-gray-100 hover:border-gray-400"
+                    checked ? "silver-btn border-gray-300" : "border-gray-300 bg-gray-100 hover:border-gray-400"
                 }`}>
                     {checked && <Check size={10} className="text-white" />}
                 </div>
@@ -159,7 +159,7 @@ function FieldValueEditor({
                 <button
                     onClick={() => save(draft)}
                     disabled={saving}
-                    className="text-emerald-600 hover:text-emerald-500 disabled:opacity-50 cursor-pointer flex-shrink-0"
+                    className="text-gray-700 hover:text-gray-700 disabled:opacity-50 cursor-pointer flex-shrink-0"
                 >
                     {saving ? <Loader2 size={12} className="animate-spin" /> : <Check size={12} />}
                 </button>
@@ -304,7 +304,7 @@ export default function CardCustomFields({
                                                 onClick={() => handleDeleteField(field.id)}
                                                 disabled={!!deletingFieldId}
                                                 title={`Delete field "${field.name}"`}
-                                                className="opacity-0 group-hover/row:opacity-100 text-gray-400 hover:text-rose-500 transition cursor-pointer disabled:cursor-not-allowed flex-shrink-0"
+                                                className="opacity-0 group-hover/row:opacity-100 text-gray-400 hover:text-gray-700 transition cursor-pointer disabled:cursor-not-allowed flex-shrink-0"
                                             >
                                                 {isDeleting
                                                     ? <Loader2 size={12} className="animate-spin" />

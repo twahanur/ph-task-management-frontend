@@ -123,7 +123,7 @@ export default function CardLabelsPopover({
                                         {loading ? (
                                             <Loader2 size={12} className="animate-spin text-gray-500" />
                                         ) : assigned ? (
-                                            <Check size={13} className="text-emerald-500" />
+                                            <Check size={13} className="text-gray-700" />
                                         ) : null}
                                     </span>
                                 </button>

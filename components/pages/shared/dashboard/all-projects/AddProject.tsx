@@ -59,7 +59,7 @@ export default function AddProject() {
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="title" className="text-sm font-medium text-gray-700">
-              Project Title <span className="text-red-500">*</span>
+              Project Title <span className="text-gray-700">*</span>
             </label>
             <Input
               id="title"

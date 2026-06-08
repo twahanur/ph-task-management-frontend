@@ -95,7 +95,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="bg-blue-50 text-blue-600 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+            <span className="silver-btn text-gray-700 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
               <User size={12} />
               Account Settings
             </span>
@@ -116,7 +116,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
           <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col items-center text-center space-y-4">
             <Avatar className="w-24 h-24 rounded-2xl border-2 border-slate-100 shadow-sm">
               <AvatarImage src={avatarUrl} alt={name} />
-              <AvatarFallback className="rounded-2xl bg-blue-50 text-blue-600 text-2xl font-bold">
+              <AvatarFallback className="rounded-2xl silver-btn text-gray-700 text-2xl font-bold">
                 {initials}
               </AvatarFallback>
             </Avatar>
@@ -151,7 +151,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
             </h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 flex flex-col items-center justify-center text-center">
-                <Layers className="text-blue-500 mb-2" size={20} />
+                <Layers className="text-gray-700 mb-2" size={20} />
                 <span className="text-2xl font-black text-slate-800">
                   {profile._count?.card_assignments || 0}
                 </span>
@@ -160,7 +160,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
                 </span>
               </div>
               <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 flex flex-col items-center justify-center text-center">
-                <Bell className="text-amber-500 mb-2" size={20} />
+                <Bell className="text-gray-700 mb-2" size={20} />
                 <span className="text-2xl font-black text-slate-800">
                   {profile._count?.notifications || 0}
                 </span>
@@ -243,7 +243,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
                 <Button
                   type="submit"
                   disabled={isSavingProfile}
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold px-5 flex items-center gap-2 cursor-pointer"
+                  className="silver-btn hover:silver-btn text-white rounded-xl font-semibold px-5 flex items-center gap-2 cursor-pointer"
                 >
                   <Save size={16} />
                   {isSavingProfile ? "Saving..." : "Save Profile"}
@@ -265,7 +265,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                 <div className="space-y-1">
                   <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                    <Palette size={16} className="text-blue-500" />
+                    <Palette size={16} className="text-gray-700" />
                     Interface Theme
                   </h4>
                   <p className="text-xs text-slate-400">
@@ -290,7 +290,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                 <div className="space-y-1">
                   <h4 className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                    <Bell size={16} className="text-amber-500" />
+                    <Bell size={16} className="text-gray-700" />
                     Email Notifications
                   </h4>
                   <p className="text-xs text-slate-400">
@@ -309,7 +309,7 @@ export default function ProfileMain({ initialData }: ProfileMainProps) {
                 <Button
                   onClick={handleSavePreferences}
                   disabled={isSavingPrefs}
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold px-5 flex items-center gap-2 cursor-pointer"
+                  className="silver-btn hover:silver-btn text-white rounded-xl font-semibold px-5 flex items-center gap-2 cursor-pointer"
                 >
                   <Save size={16} />
                   {isSavingPrefs ? "Saving..." : "Save Preferences"}

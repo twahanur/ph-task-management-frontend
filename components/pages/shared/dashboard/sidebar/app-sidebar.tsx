@@ -79,9 +79,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <div className="relative z-10 flex w-full items-center justify-between px-4 group-data-[collapsible=icon]:p-2 py-1.5">
                   <p className="flex items-center gap-2">
                     <span>
-                      <LogOut size={16} className="text-red-600" />
+                      <LogOut size={16} className="text-gray-700" />
                     </span>
-                    <span className="text-red-600 text-sm font-medium">Logout</span>
+                    <span className="text-gray-700 text-sm font-medium">Logout</span>
                   </p>
                 </div>
               </SidebarButtonEffect>

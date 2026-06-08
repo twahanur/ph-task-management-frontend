@@ -153,13 +153,13 @@ export default function WorkloadMain({ initialData }: WorkloadMainProps) {
         <div className="silver-metallic rounded-2xl p-5 border border-gray-300 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-bold text-gray-500">Avg Completion Rate</span>
-            <h3 className="text-3xl font-extrabold text-emerald-700">{stats.completionRate}%</h3>
+            <h3 className="text-3xl font-extrabold text-gray-700">{stats.completionRate}%</h3>
             <p className="text-xs text-gray-600 font-semibold flex items-center gap-1 mt-0.5">
               <TrendingUp size={12} />
               Across all assigned tasks
             </p>
           </div>
-          <div className="w-12 h-12 rounded-2xl silver-input flex items-center justify-center text-emerald-700 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-input flex items-center justify-center text-gray-700 shrink-0">
             <CheckCircle2 size={24} />
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function WorkloadMain({ initialData }: WorkloadMainProps) {
                 <th className="py-3 px-3">Team Member</th>
                 <th className="py-3 px-3">Role</th>
                 <th className="py-3 px-3 text-center">Total Tasks</th>
-                <th className="py-3 px-3 text-center text-emerald-700">Completed</th>
+                <th className="py-3 px-3 text-center text-gray-700">Completed</th>
                 <th className="py-3 px-3 text-center text-amber-605">Pending</th>
                 <th className="py-3 px-3">Completion Bar</th>
                 <th className="py-3 px-3 text-right">Rate</th>
@@ -319,7 +319,7 @@ export default function WorkloadMain({ initialData }: WorkloadMainProps) {
                       <td className="py-4 px-3 text-center font-bold text-gray-850">{total}</td>
 
                       {/* Completed */}
-                      <td className="py-4 px-3 text-center text-emerald-700 font-bold">{completed}</td>
+                      <td className="py-4 px-3 text-center text-gray-700 font-bold">{completed}</td>
 
                       {/* Pending */}
                       <td className="py-4 px-3 text-center text-amber-605 font-bold">{pending}</td>
@@ -329,7 +329,7 @@ export default function WorkloadMain({ initialData }: WorkloadMainProps) {
                         <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden border border-gray-350">
                           <div 
                             className={`h-full rounded-full transition-all duration-300 ${
-                              rate >= 75 ? "bg-emerald-600" : rate >= 40 ? "bg-gray-600" : "bg-amber-600"
+                              rate >= 75 ? "silver-btn" : rate >= 40 ? "bg-gray-600" : "silver-btn"
                             }`}
                             style={{ width: `${rate}%` }}
                           />

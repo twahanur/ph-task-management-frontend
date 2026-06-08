@@ -311,7 +311,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
   if (!isMounted) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-8 h-8 border-4 border-gray-300 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -427,7 +427,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
           </div>
           <div className="mt-3 pt-3 border-t border-gray-300 flex items-center justify-between text-[11px] text-gray-500">
             <span className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span className="w-1.5 h-1.5 rounded-full silver-btn"></span>
               Active: {boardsStats.active}
             </span>
             <span>Completed: {boardsStats.completed}</span>
@@ -463,7 +463,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             <h3 className="text-3xl font-extrabold text-gray-850">{cardsStats.completed}</h3>
             <p className="text-xs font-semibold text-gray-600 mt-1">TASKS COMPLETED</p>
           </div>
-          <div className="mt-3 pt-3 border-t border-gray-300 flex items-center justify-between text-[11px] text-emerald-700 font-medium">
+          <div className="mt-3 pt-3 border-t border-gray-300 flex items-center justify-between text-[11px] text-gray-700 font-medium">
             <span className="flex items-center gap-1">
               <TrendingUp size={12} />
               {cardsStats.completionRate}% Rate
@@ -503,7 +503,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             <h3 className="text-3xl font-extrabold text-gray-855">{cardsStats.overdue}</h3>
             <p className="text-xs font-semibold text-gray-600 mt-1">OVERDUE TASKS</p>
           </div>
-          <div className="mt-3 pt-3 border-t border-gray-300 flex items-center gap-1.5 text-[11px] text-red-700 font-semibold">
+          <div className="mt-3 pt-3 border-t border-gray-300 flex items-center gap-1.5 text-[11px] text-gray-700 font-semibold">
             {cardsStats.overdue > 0 ? (
               <>
                 <AlertCircle size={12} className="animate-pulse" />
@@ -743,7 +743,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
           <div className="silver-metallic rounded-2xl border border-gray-300 shadow-sm overflow-hidden flex flex-col justify-between h-[420px] p-5">
             <div className="flex items-center justify-between border-b border-gray-300 pb-3">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-4 h-4 text-red-600" />
+                <AlertCircle className="w-4 h-4 text-gray-700" />
                 <h3 className="font-bold text-gray-855 text-sm uppercase tracking-wide">High Priority Tasks</h3>
               </div>
               <div className="flex items-center gap-2 text-xs">
@@ -785,7 +785,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
                           Project: {task.board?.name}
                         </p>
                       </div>
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 bg-red-50 text-red-700 border border-red-150 rounded uppercase tracking-wider shrink-0">
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 silver-btn text-gray-700 border border-red-150 rounded uppercase tracking-wider shrink-0">
                         High
                       </span>
                     </div>
@@ -1021,8 +1021,8 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
                               </div>
                             </td>
                             <td className="py-3.5 text-center font-bold text-gray-850">{member.cards?.total}</td>
-                            <td className="py-3.5 text-center text-emerald-700 font-bold">{member.cards?.completed}</td>
-                            <td className="py-3.5 text-center text-amber-600 font-bold">{member.cards?.pending}</td>
+                            <td className="py-3.5 text-center text-gray-700 font-bold">{member.cards?.completed}</td>
+                            <td className="py-3.5 text-center text-gray-700 font-bold">{member.cards?.pending}</td>
                           </tr>
                         );
                       })
@@ -1090,7 +1090,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
           <form onSubmit={handleCreateProjectSubmit} className="flex flex-col gap-6 mt-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="p-title" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Project Title <span className="text-red-500">*</span>
+                Project Title <span className="text-gray-700">*</span>
               </label>
               <Input
                 id="p-title"
@@ -1141,7 +1141,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* Workspace selection */}
             <div className="flex flex-col gap-2">
               <label htmlFor="task-workspace" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Select Project <span className="text-red-500">*</span>
+                Select Project <span className="text-gray-700">*</span>
               </label>
               <div className="relative">
                 <select
@@ -1171,7 +1171,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* Board selection */}
             <div className="flex flex-col gap-2">
               <label htmlFor="task-board" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Select Board <span className="text-red-500">*</span>
+                Select Board <span className="text-gray-700">*</span>
               </label>
               <div className="relative">
                 <select
@@ -1203,7 +1203,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* List selection */}
             <div className="flex flex-col gap-2">
               <label htmlFor="task-list" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Select List <span className="text-red-500">*</span>
+                Select List <span className="text-gray-700">*</span>
               </label>
               <div className="relative">
                 <select
@@ -1230,7 +1230,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* Task Title */}
             <div className="flex flex-col gap-2">
               <label htmlFor="task-title" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Task Title <span className="text-red-500">*</span>
+                Task Title <span className="text-gray-700">*</span>
               </label>
               <Input
                 id="task-title"
@@ -1321,7 +1321,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* Workspace selection */}
             <div className="flex flex-col gap-2">
               <label htmlFor="member-workspace" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Select Project <span className="text-red-500">*</span>
+                Select Project <span className="text-gray-700">*</span>
               </label>
               <div className="relative">
                 <select
@@ -1345,7 +1345,7 @@ export default function DashboardMain({ initialData }: DashboardMainProps) {
             {/* Email Address */}
             <div className="flex flex-col gap-2">
               <label htmlFor="member-email" className="text-xs font-semibold uppercase tracking-wider text-gray-600">
-                Email Address <span className="text-red-500">*</span>
+                Email Address <span className="text-gray-700">*</span>
               </label>
               <Input
                 id="member-email"

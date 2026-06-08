@@ -199,25 +199,25 @@ export default function TeamPage() {
   return (
     <div className="space-y-6 pb-12 animate-in fade-in duration-200">
       {/* Page Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 silver-metallic p-6 rounded-2xl">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="bg-blue-50 text-blue-600 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+            <span className="silver-btn text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
               <Layers size={12} />
               Collaboration Hub
             </span>
           </div>
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
+          <h1 className="text-2xl font-bold text-gray-800 tracking-tight">
             TEAM MEMBERS
           </h1>
-          <p className="text-slate-400 text-sm">
+          <p className="text-gray-600 text-sm">
             Manage roles and access permissions for members across your project workspaces.
           </p>
         </div>
         <div className="flex items-center gap-3 relative">
           <button 
             onClick={fetchWorkspaces}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 transition text-sm text-slate-600 cursor-pointer font-semibold shadow-sm"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl silver-btn transition text-sm cursor-pointer font-semibold"
           >
             <RefreshCw size={15} className={loading ? "animate-spin" : ""} />
             Refresh
@@ -227,27 +227,27 @@ export default function TeamPage() {
             <div className="relative" ref={popoverRef}>
               <button 
                 onClick={() => setIsInviteOpen(!isInviteOpen)}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-sm text-white font-medium cursor-pointer shadow-sm"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl silver-btn transition text-sm font-medium cursor-pointer"
               >
                 <UserPlus size={15} />
                 Invite Member
               </button>
               
               {isInviteOpen && (
-                <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-slate-200 rounded-xl shadow-2xl z-30 p-4 text-slate-800">
-                  <div className="flex justify-between items-center pb-2 mb-2 border-b border-slate-100">
-                    <h4 className="text-xs font-bold text-slate-700 uppercase">Invite to Workspace</h4>
+                <div className="absolute top-full right-0 mt-2 w-64 silver-metallic rounded-xl z-30 p-4 text-gray-800">
+                  <div className="flex justify-between items-center pb-2 mb-2 border-b border-gray-300/60">
+                    <h4 className="text-xs font-bold text-gray-800 uppercase">Invite to Workspace</h4>
                     <button 
                       onClick={() => setIsInviteOpen(false)} 
-                      className="text-slate-400 hover:text-slate-600 cursor-pointer"
+                      className="text-gray-500 hover:text-gray-800 cursor-pointer"
                     >
                       <X size={14} />
                     </button>
                   </div>
                   <form onSubmit={handleInviteMember} className="space-y-3">
                     <div className="flex flex-col gap-1">
-                      <label htmlFor="invite-email" className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                        Email Address <span className="text-blue-500">*</span>
+                      <label htmlFor="invite-email" className="text-[10px] font-bold text-gray-600 uppercase tracking-wider">
+                        Email Address <span className="text-gray-700">*</span>
                       </label>
                       <input
                         id="invite-email"
@@ -256,18 +256,18 @@ export default function TeamPage() {
                         value={inviteEmail}
                         onChange={(e) => setInviteEmail(e.target.value)}
                         required
-                        className="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                        className="w-full silver-input rounded-lg px-3 py-2 text-xs focus:outline-none"
                       />
                     </div>
                     
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                      <label className="text-[10px] font-bold text-gray-600 uppercase tracking-wider">
                         Role
                       </label>
                       <select 
                         value={inviteRole} 
                         onChange={(e) => setInviteRole(e.target.value)}
-                        className="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-lg px-2.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+                        className="w-full silver-input rounded-lg px-2.5 py-2 text-xs focus:outline-none cursor-pointer"
                       >
                         <option value="member">Member</option>
                         <option value="admin">Admin</option>
@@ -277,7 +277,7 @@ export default function TeamPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full mt-2 bg-blue-600 hover:bg-blue-700 transition text-xs font-bold py-2 rounded-lg text-white cursor-pointer disabled:opacity-50"
+                      className="w-full mt-2 silver-btn transition text-xs font-bold py-2 rounded-lg cursor-pointer disabled:opacity-50"
                     >
                       {isSubmitting ? "Inviting..." : "Invite Member"}
                     </button>
@@ -290,27 +290,27 @@ export default function TeamPage() {
       </div>
 
       {loading && workspaces.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-slate-400">
-          <RefreshCw className="animate-spin mb-4 text-blue-500" size={32} />
+        <div className="flex flex-col items-center justify-center py-20 text-gray-600">
+          <RefreshCw className="animate-spin mb-4 text-gray-700" size={32} />
           <p className="text-sm">Loading workspaces...</p>
         </div>
       ) : workspaces.length === 0 ? (
-        <div className="border border-dashed border-slate-200 rounded-2xl p-12 text-center max-w-md mx-auto mt-12 bg-white shadow-sm">
-          <Layers size={40} className="mx-auto text-slate-300 mb-4" />
-          <h3 className="text-lg font-bold text-slate-800 mb-1">No Projects Found</h3>
-          <p className="text-sm text-slate-500">Create a project/workspace first before managing team members.</p>
+        <div className="border border-dashed border-gray-300 rounded-2xl p-12 text-center max-w-md mx-auto mt-12 silver-metallic">
+          <Layers size={40} className="mx-auto text-gray-500 mb-4" />
+          <h3 className="text-lg font-bold text-gray-800 mb-1">No Projects Found</h3>
+          <p className="text-sm text-gray-600">Create a project/workspace first before managing team members.</p>
         </div>
       ) : (
         <div className="space-y-6">
           {/* Workspace Selection & Search Bar */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between silver-metallic p-4 rounded-2xl">
             {/* Selection Dropdown */}
             <div className="w-full md:w-80 flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Select Project Workspace</label>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-gray-600">Select Project Workspace</label>
               <select
                 value={selectedWorkspaceId}
                 onChange={(e) => setSelectedWorkspaceId(e.target.value)}
-                className="bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer w-full transition"
+                className="silver-input rounded-xl px-3.5 py-2.5 text-sm focus:outline-none cursor-pointer w-full transition"
               >
                 <option value="all">All Workspaces</option>
                 {workspaces.map((w) => (
@@ -323,26 +323,26 @@ export default function TeamPage() {
 
             {/* Search Input */}
             <div className="w-full md:w-80 flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Search Members</label>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-gray-600">Search Members</label>
               <div className="relative">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-600" size={16} />
                 <input
                   type="text"
                   placeholder="Filter by name or email..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl pl-10 pr-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
+                  className="w-full silver-input rounded-xl pl-10 pr-3.5 py-2.5 text-sm focus:outline-none transition"
                 />
               </div>
             </div>
           </div>
 
           {/* Members List Container */}
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+          <div className="silver-metallic rounded-2xl overflow-hidden">
             <div className="overflow-x-auto custom-scrollbar">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-slate-100 bg-slate-50/50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+                  <tr className="border-b border-gray-300/60 text-gray-600 text-xs font-bold uppercase tracking-wider">
                     <th className="py-4 px-6">Member</th>
                     <th className="py-4 px-6">Email</th>
                     <th className="py-4 px-6">Workspaces</th>
@@ -351,30 +351,30 @@ export default function TeamPage() {
                     <th className="py-4 px-6 text-center">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 text-sm text-slate-700">
+                <tbody className="divide-y divide-gray-300/60 text-sm text-gray-700">
                   {displayedMembers.map((member: any) => {
                     const initials = member.user?.name ? member.user.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2).toUpperCase() : "US";
                     const isOwner = member.role === "owner";
                     const showActions = selectedWorkspaceId !== "all";
 
                     return (
-                      <tr key={member.user?.id} className="hover:bg-slate-50/50 transition-colors">
+                      <tr key={member.user?.id} className="hover:bg-gray-200/20 transition-colors">
                         {/* Member Profile */}
                         <td className="py-4 px-6">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-full bg-blue-50 border border-slate-200 flex items-center justify-center font-bold text-blue-600 overflow-hidden shadow-sm flex-shrink-0">
+                            <div className="w-9 h-9 rounded-full silver-input flex items-center justify-center font-bold text-gray-800 overflow-hidden flex-shrink-0">
                               {member.user?.avatar_url ? (
                                 <img src={member.user.avatar_url} alt="" className="w-full h-full object-cover" />
                               ) : (
                                 initials
                               )}
                             </div>
-                            <span className="font-bold text-slate-800">{member.user?.name || "Unknown User"}</span>
+                            <span className="font-bold text-gray-800">{member.user?.name || "Unknown User"}</span>
                           </div>
                         </td>
 
                         {/* Email */}
-                        <td className="py-4 px-6 text-slate-500 font-medium">
+                        <td className="py-4 px-6 text-gray-600 font-medium">
                           {member.user?.email}
                         </td>
 
@@ -382,7 +382,7 @@ export default function TeamPage() {
                         <td className="py-4 px-6 max-w-[220px]">
                           <div className="flex flex-wrap gap-1.5">
                             {member.workspaces?.map((ws: string, idx: number) => (
-                              <span key={idx} className="flex items-center gap-1 text-[10px] font-semibold bg-slate-100 border border-slate-200 text-slate-600 px-2 py-0.5 rounded-full max-w-[150px] truncate">
+                              <span key={idx} className="flex items-center gap-1 text-[10px] font-semibold silver-input text-gray-700 px-2 py-0.5 rounded-full max-w-[150px] truncate">
                                 <Briefcase size={8} />
                                 {ws}
                               </span>
@@ -391,7 +391,7 @@ export default function TeamPage() {
                         </td>
 
                         {/* Joined Date */}
-                        <td className="py-4 px-6 text-slate-400 font-medium">
+                        <td className="py-4 px-6 text-gray-600 font-medium">
                           {new Date(member.joined_at).toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "short",
@@ -402,29 +402,29 @@ export default function TeamPage() {
                         {/* Role Select */}
                         <td className="py-4 px-6">
                           {isOwner ? (
-                            <div className="flex items-center gap-1 text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 w-fit text-[10px] font-bold uppercase">
+                            <div className="flex items-center gap-1 silver-btn px-2.5 py-0.5 rounded-full w-fit text-[10px] font-bold uppercase">
                               <Shield size={12} />
                               Owner
                             </div>
                           ) : showActions ? (
                             <div className="flex items-center gap-2">
                               {member.role === "admin" ? (
-                                <Shield size={14} className="text-blue-500" />
+                                <Shield size={14} className="text-gray-700" />
                               ) : (
-                                <User size={14} className="text-slate-400" />
+                                <User size={14} className="text-gray-600" />
                               )}
                               <select
                                 value={member.role}
                                 onChange={(e) => handleRoleChange(member.user.id, e.target.value as any)}
                                 disabled={updatingUserId === member.user.id}
-                                className="bg-slate-50 border border-slate-200 text-slate-800 rounded-lg px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer transition disabled:opacity-50 font-semibold"
+                                className="silver-input rounded-lg px-2 py-1 text-xs focus:outline-none cursor-pointer transition disabled:opacity-50 font-semibold"
                               >
                                 <option value="member">Member</option>
                                 <option value="admin">Admin</option>
                               </select>
                             </div>
                           ) : (
-                            <div className="flex items-center gap-1.5 text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 w-fit text-[10px] font-bold uppercase">
+                            <div className="flex items-center gap-1.5 text-gray-700 silver-input px-2.5 py-0.5 rounded-full w-fit text-[10px] font-bold uppercase">
                               <User size={10} />
                               {member.role || "Member"}
                             </div>
@@ -434,18 +434,18 @@ export default function TeamPage() {
                         {/* Actions */}
                         <td className="py-4 px-6 text-center">
                           {isOwner ? (
-                            <span className="text-[10px] text-slate-400 font-bold uppercase">System Owner</span>
+                            <span className="text-[10px] text-gray-600 font-bold uppercase">System Owner</span>
                           ) : showActions ? (
                             <button
                               onClick={() => handleRemoveMember(member.user.id, member.user?.name || "Member")}
                               disabled={removingUserId === member.user.id}
-                              className="text-red-500 hover:text-red-600 hover:bg-red-50 p-2 rounded-xl transition cursor-pointer disabled:opacity-50"
+                              className="text-gray-700 hover:text-gray-900 hover:bg-gray-200/50 p-2 rounded-xl transition cursor-pointer disabled:opacity-50"
                               title="Remove member from workspace"
                             >
                               <Trash2 size={16} className={removingUserId === member.user.id ? "animate-spin" : ""} />
                             </button>
                           ) : (
-                            <span className="text-[10px] text-slate-400 font-bold" title="Select a workspace to edit member">
+                            <span className="text-[10px] text-gray-600 font-bold" title="Select a workspace to edit member">
                               -
                             </span>
                           )}
@@ -456,7 +456,7 @@ export default function TeamPage() {
 
                   {displayedMembers.length === 0 && (
                     <tr>
-                      <td colSpan={6} className="py-12 px-6 text-center text-slate-400 bg-slate-50/20 font-semibold">
+                      <td colSpan={6} className="py-12 px-6 text-center text-gray-600 font-semibold">
                         No team members found matching criteria.
                       </td>
                     </tr>

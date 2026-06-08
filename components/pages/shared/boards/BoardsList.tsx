@@ -122,12 +122,12 @@ function BoardCard({
                             <button
                                 onClick={(e) => handleToggleStar(e, board.id, board.isStarred)}
                                 disabled={togglingStarId === board.id}
-                                className={`p-1 rounded-lg bg-black/30 hover:bg-black/50 border border-white/5 transition cursor-pointer ${board.isStarred ? 'text-yellow-400 opacity-100 animate-none' : 'text-slate-400 hover:text-yellow-400'}`}
+                                className={`p-1 rounded-lg bg-black/30 hover:bg-black/50 border border-white/5 transition cursor-pointer ${board.isStarred ? 'text-gray-700 opacity-100 animate-none' : 'text-slate-400 hover:text-gray-700'}`}
                                 title={board.isStarred ? "Unstar Board" : "Star Board"}
                             >
                                 <Star
                                     size={10}
-                                    className={`${togglingStarId === board.id ? "animate-pulse scale-110" : ""} ${board.isStarred ? "fill-yellow-400 text-yellow-400" : "text-white/70"}`}
+                                    className={`${togglingStarId === board.id ? "animate-pulse scale-110" : ""} ${board.isStarred ? "fill-gray-700 text-gray-700" : "text-white/70"}`}
                                 />
                             </button>
                             <button
@@ -161,7 +161,7 @@ function BoardCard({
                             </div>
                             <div className="w-full bg-white/20 rounded-full h-1 mt-1 overflow-hidden">
                                 <div 
-                                    className="bg-emerald-400 h-1 rounded-full transition-all duration-300" 
+                                    className="silver-btn h-1 rounded-full transition-all duration-300" 
                                     style={{ width: `${progressPercent}%` }} 
                                 />
                             </div>
@@ -223,13 +223,13 @@ function BoardCard({
                         {(highPriorityCount > 0 || overdueCount > 0) && (
                             <div className="flex flex-wrap gap-1 pt-0.5">
                                 {highPriorityCount > 0 && (
-                                    <span className="inline-flex items-center gap-0.5 text-[8px] font-bold px-1.5 py-0.5 rounded bg-rose-500/80 text-white border border-rose-400/20 shadow-sm shrink-0">
+                                    <span className="inline-flex items-center gap-0.5 text-[8px] font-bold px-1.5 py-0.5 rounded silver-btn text-white border border-gray-300 shadow-sm shrink-0">
                                         <AlertCircle size={8} />
                                         {highPriorityCount} High
                                     </span>
                                 )}
                                 {overdueCount > 0 && (
-                                    <span className="inline-flex items-center gap-0.5 text-[8px] font-bold px-1.5 py-0.5 rounded bg-red-600/90 text-white border border-red-500/20 shadow-sm animate-pulse shrink-0">
+                                    <span className="inline-flex items-center gap-0.5 text-[8px] font-bold px-1.5 py-0.5 rounded silver-btn text-white border border-gray-300 shadow-sm animate-pulse shrink-0">
                                         <Clock size={8} />
                                         {overdueCount} Overdue
                                     </span>
@@ -246,7 +246,7 @@ function BoardCard({
                             {board.visibility}
                         </span>
                         {board.status && (
-                            <span className={`text-[9px] font-bold backdrop-blur-md px-1.5 py-0.5 rounded capitalize border border-white/5 ${board.status === 'active' ? 'bg-green-500/40 text-green-100' : 'bg-gray-500/40 text-gray-200'}`}>
+                            <span className={`text-[9px] font-bold backdrop-blur-md px-1.5 py-0.5 rounded capitalize border border-white/5 ${board.status === 'active' ? 'silver-btn text-gray-700' : 'bg-gray-500/40 text-gray-200'}`}>
                                 {board.status}
                             </span>
                         )}

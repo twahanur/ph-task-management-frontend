@@ -27,8 +27,8 @@ const TooltipComponent = ({
       <Tooltip>
         <TooltipTrigger asChild>
           {Icon ? (
-            <span className="p-1 rounded-full hover:bg-green-500 block duration-500">
-              <Icon size={18} className="text-green-800" />
+            <span className="p-1 rounded-full hover:silver-btn block duration-500">
+              <Icon size={18} className="text-gray-700" />
             </span>
           ) : (
             <span className={cn("cursor-pointer ", classname)}>

@@ -82,7 +82,7 @@ export default function BoardCard({
       }}
       className={`bg-white hover:bg-gray-50/80 text-gray-800 p-3.5 rounded-xl shadow-sm hover:shadow-md cursor-grab active:cursor-grabbing group transition-all duration-200 hover:-translate-y-0.5 border ${
         card.status === "completed"
-          ? "border-emerald-400 bg-emerald-50/35 hover:bg-emerald-50/50"
+          ? "border-gray-300 silver-btn hover:silver-btn"
           : "border-gray-300 hover:border-gray-400"
       } ${isDragging ? "opacity-30 scale-95 border-gray-400" : ""} ${
         draggedOver ? "border-t-2 border-t-gray-500 pt-5 mt-1" : ""
@@ -142,8 +142,8 @@ export default function BoardCard({
             isUpdating
               ? "border-gray-400 bg-transparent cursor-not-allowed"
               : card.status === "completed"
-              ? "bg-emerald-500 border-emerald-500 text-white hover:bg-emerald-600 hover:border-emerald-600"
-              : "border-gray-400 hover:border-emerald-500 bg-transparent hover:bg-emerald-50"
+              ? "silver-btn border-gray-300 text-white hover:silver-btn hover:border-gray-300"
+              : "border-gray-400 hover:border-gray-300 bg-transparent hover:silver-btn"
           }`}
           title={card.status === "completed" ? "Mark as incompleted" : "Mark as completed"}
         >
@@ -192,7 +192,7 @@ export default function BoardCard({
           
           {card.checklistsCount > 0 && (
             <div 
-              className="flex items-center gap-1 bg-emerald-50/60 text-emerald-600 border border-emerald-250 px-1.5 py-0.5 rounded-md hover:bg-emerald-100 transition"
+              className="flex items-center gap-1 silver-btn text-gray-700 border border-emerald-250 px-1.5 py-0.5 rounded-md hover:silver-btn transition"
               title="Checklist items"
             >
               <CheckSquare size={12} className="stroke-[2.5px]" />
@@ -204,7 +204,7 @@ export default function BoardCard({
             <div 
               className={`flex items-center gap-1 px-1.5 py-0.5 rounded-md border transition ${
                 isOverdue 
-                  ? "bg-red-50 hover:bg-red-100 text-red-600 border-red-200" 
+                  ? "silver-btn hover:silver-btn text-gray-700 border-gray-300" 
                   : "bg-gray-150 text-gray-600 border-gray-250 hover:bg-gray-200"
               }`}
               title={isOverdue ? "Overdue!" : "Due date"}

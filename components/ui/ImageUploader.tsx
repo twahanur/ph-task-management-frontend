@@ -66,7 +66,7 @@ const ImageUploader = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             whileHover={{ scale: 1 }}
-            className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full text-yellow-400 transition cursor-pointer"
+            className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full text-gray-700 transition cursor-pointer"
             onClick={() => fileInputRef.current?.click()}
           >
             <Camera className={cameraClass} />

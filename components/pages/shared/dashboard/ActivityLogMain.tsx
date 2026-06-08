@@ -114,31 +114,31 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
       case "created":
         return {
           icon: <PlusCircle size={14} />,
-          bg: "bg-blue-50 text-blue-600 border-blue-100",
-          iconBg: "bg-blue-500 text-white",
-          dotColor: "bg-blue-500"
+          bg: "silver-btn text-gray-700 border-gray-300",
+          iconBg: "silver-btn text-white",
+          dotColor: "silver-btn"
         };
       case "completed":
         return {
           icon: <CheckCircle2 size={14} />,
-          bg: "bg-emerald-50 text-emerald-600 border-emerald-100",
-          iconBg: "bg-emerald-500 text-white",
-          dotColor: "bg-emerald-500"
+          bg: "silver-btn text-gray-700 border-gray-300",
+          iconBg: "silver-btn text-white",
+          dotColor: "silver-btn"
         };
       case "deleted":
         return {
           icon: <Trash2 size={14} />,
-          bg: "bg-rose-50 text-rose-600 border-rose-100",
-          iconBg: "bg-rose-500 text-white",
-          dotColor: "bg-rose-500"
+          bg: "silver-btn text-gray-700 border-gray-300",
+          iconBg: "silver-btn text-white",
+          dotColor: "silver-btn"
         };
       case "updated":
         default:
         return {
           icon: <Edit size={14} />,
-          bg: "bg-amber-50 text-amber-600 border-amber-100",
-          iconBg: "bg-amber-500 text-white",
-          dotColor: "bg-amber-500"
+          bg: "silver-btn text-gray-700 border-gray-300",
+          iconBg: "silver-btn text-white",
+          dotColor: "silver-btn"
         };
     }
   };
@@ -149,7 +149,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="bg-blue-50 text-blue-600 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
+            <span className="silver-btn text-gray-700 text-xs px-2.5 py-1 rounded-full font-semibold flex items-center gap-1">
               <Activity size={12} className="animate-pulse" />
               Audit Log
             </span>
@@ -172,7 +172,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
             <h3 className="text-3xl font-extrabold text-slate-800">{metrics.total}</h3>
             <p className="text-xs text-slate-500">Workspace updates logged</p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <Activity size={24} />
           </div>
         </div>
@@ -181,10 +181,10 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-bold text-slate-400">Items Completed</span>
-            <h3 className="text-3xl font-extrabold text-emerald-600">{metrics.completed}</h3>
+            <h3 className="text-3xl font-extrabold text-gray-700">{metrics.completed}</h3>
             <p className="text-xs text-slate-500">Checklist milestones reached</p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <CheckCircle2 size={24} />
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
               {metrics.created} created · {metrics.updated} modified
             </p>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-500 shrink-0">
+          <div className="w-12 h-12 rounded-2xl silver-btn flex items-center justify-center text-gray-700 shrink-0">
             <TrendingUp size={24} />
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
+              className="w-full pl-10 pr-4 py-2 text-sm bg-slate-50 border border-slate-200 text-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 transition"
             />
           </div>
 
@@ -298,7 +298,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                   setSelectedEntityType("all");
                   setCurrentPage(1);
                 }}
-                className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-500 font-semibold px-2 py-1.5 rounded-xl hover:bg-blue-50 transition cursor-pointer"
+                className="flex items-center gap-1 text-xs text-gray-700 hover:text-gray-700 font-semibold px-2 py-1.5 rounded-xl hover:silver-btn transition cursor-pointer"
               >
                 <RefreshCw size={11} />
                 Reset Filters
@@ -411,7 +411,7 @@ export default function ActivityLogMain({ initialData }: ActivityLogMainProps) {
                       onClick={() => setCurrentPage(pNum)}
                       className={`w-7.5 h-7.5 rounded-xl flex items-center justify-center font-bold transition cursor-pointer ${
                         currentPage === pNum 
-                          ? "bg-blue-600 text-white shadow-sm shadow-blue-100" 
+                          ? "silver-btn text-white shadow-sm shadow-gray-300" 
                           : "bg-slate-50 border border-slate-200 text-slate-600 hover:bg-slate-100"
                       }`}
                     >

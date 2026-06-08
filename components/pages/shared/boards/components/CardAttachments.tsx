@@ -37,16 +37,16 @@ export default function CardAttachments({ attachments, onDelete }: CardAttachmen
   const getFileIcon = (mimeType: string, fileName: string) => {
     const nameLower = fileName.toLowerCase();
     if (mimeType?.startsWith("image/")) {
-      return { icon: File, color: "text-emerald-400", bgColor: "bg-emerald-500/10", typeLabel: "Image" };
+      return { icon: File, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "Image" };
     }
     if (mimeType === "application/pdf" || nameLower.endsWith(".pdf")) {
-      return { icon: FileText, color: "text-rose-400", bgColor: "bg-rose-500/10", typeLabel: "PDF" };
+      return { icon: FileText, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "PDF" };
     }
     if (mimeType === "application/zip" || mimeType === "application/x-zip-compressed" || nameLower.endsWith(".zip")) {
-      return { icon: FileArchive, color: "text-amber-400", bgColor: "bg-amber-500/10", typeLabel: "ZIP Archive" };
+      return { icon: FileArchive, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "ZIP Archive" };
     }
     if (mimeType === "text/plain" || mimeType === "text/csv" || nameLower.endsWith(".txt") || nameLower.endsWith(".csv")) {
-      return { icon: FileText, color: "text-sky-400", bgColor: "bg-sky-500/10", typeLabel: "Text" };
+      return { icon: FileText, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "Text" };
     }
     if (
       mimeType === "application/msword" ||
@@ -54,7 +54,7 @@ export default function CardAttachments({ attachments, onDelete }: CardAttachmen
       nameLower.endsWith(".doc") ||
       nameLower.endsWith(".docx")
     ) {
-      return { icon: FileText, color: "text-blue-400", bgColor: "bg-blue-500/10", typeLabel: "Word Doc" };
+      return { icon: FileText, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "Word Doc" };
     }
     if (
       mimeType === "application/vnd.ms-excel" ||
@@ -62,7 +62,7 @@ export default function CardAttachments({ attachments, onDelete }: CardAttachmen
       nameLower.endsWith(".xls") ||
       nameLower.endsWith(".xlsx")
     ) {
-      return { icon: FileSpreadsheet, color: "text-emerald-400", bgColor: "bg-emerald-500/10", typeLabel: "Excel Sheet" };
+      return { icon: FileSpreadsheet, color: "text-gray-700", bgColor: "silver-btn", typeLabel: "Excel Sheet" };
     }
     return { icon: File, color: "text-slate-400", bgColor: "bg-slate-500/10", typeLabel: "File" };
   };
@@ -178,7 +178,7 @@ export default function CardAttachments({ attachments, onDelete }: CardAttachmen
                 <button
                   onClick={() => handleDelete(att.id)}
                   disabled={isDeleting}
-                  className="p-1.5 text-red-500 hover:text-red-600 hover:bg-red-100/50 rounded-lg transition-colors cursor-pointer disabled:opacity-50"
+                  className="p-1.5 text-gray-700 hover:text-gray-700 hover:silver-btn rounded-lg transition-colors cursor-pointer disabled:opacity-50"
                   title="Delete attachment"
                 >
                   {isDeleting ? <Loader2 size={16} className="animate-spin" /> : <Trash2 size={16} />}

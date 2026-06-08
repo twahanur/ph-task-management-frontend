@@ -176,7 +176,7 @@ export default function CardChecklists({
                                 <button 
                                     onClick={() => handleDelete(checklist.id)}
                                     disabled={isDeleting}
-                                    className="text-red-500 hover:text-red-650 text-xs font-semibold px-2 py-1 rounded transition hover:bg-red-50 cursor-pointer disabled:opacity-50"
+                                    className="text-gray-700 hover:text-red-650 text-xs font-semibold px-2 py-1 rounded transition hover:silver-btn cursor-pointer disabled:opacity-50"
                                 >
                                     {isDeleting ? "Deleting..." : "Delete"}
                                 </button>
@@ -187,7 +187,7 @@ export default function CardChecklists({
                                 <span className="text-[10px] font-bold text-gray-550 w-8">{progressPercent}%</span>
                                 <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                                     <div 
-                                        className="h-full bg-emerald-600 transition-all duration-300 rounded-full"
+                                        className="h-full silver-btn transition-all duration-300 rounded-full"
                                         style={{ width: `${progressPercent}%` }}
                                     />
                                 </div>
@@ -314,7 +314,7 @@ export default function CardChecklists({
                                                         <div className="max-h-48 overflow-y-auto custom-scrollbar space-y-0.5">
                                                             <button 
                                                                 onClick={() => handleUpdateItemAssignee(item.id, null)}
-                                                                className="w-full text-left text-xs text-red-500 hover:bg-red-50 p-1.5 rounded transition cursor-pointer"
+                                                                className="w-full text-left text-xs text-gray-700 hover:silver-btn p-1.5 rounded transition cursor-pointer"
                                                             >
                                                                 Unassigned
                                                             </button>
@@ -358,7 +358,7 @@ export default function CardChecklists({
                                                             {item.due_date && (
                                                                 <button
                                                                     onClick={() => handleUpdateItemDueDate(item.id, null)}
-                                                                    className="bg-red-100 hover:bg-red-200 text-red-650 text-[10px] font-semibold py-1 rounded border border-red-200 transition cursor-pointer"
+                                                                    className="silver-btn hover:silver-btn text-red-650 text-[10px] font-semibold py-1 rounded border border-gray-300 transition cursor-pointer"
                                                                 >
                                                                     Remove Due Date
                                                                 </button>

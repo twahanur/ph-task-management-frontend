@@ -71,7 +71,7 @@ export default function CreateBoard({ workspaceId }: { workspaceId: string }) {
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="name" className="text-sm font-medium text-gray-700">
-              Board Name <span className="text-red-500">*</span>
+              Board Name <span className="text-gray-700">*</span>
             </label>
             <Input
               id="name"

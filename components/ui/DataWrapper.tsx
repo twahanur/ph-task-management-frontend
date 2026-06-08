@@ -53,7 +53,7 @@ const DataWrapper = <T,>({
             title="Error Loading Data"
             description={error}
             icon="⚠️"
-            className="border-red-200 bg-red-50"
+            className="border-gray-300 silver-btn"
           />
         )}
       </div>

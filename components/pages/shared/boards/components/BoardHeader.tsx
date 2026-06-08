@@ -136,11 +136,11 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
         {/* Star Button */}
         <button 
           onClick={handleToggleStar}
-          className="text-slate-400 hover:text-yellow-500 p-2 rounded-lg silver-metallic border border-gray-300 transition duration-200 active:scale-95 cursor-pointer"
+          className="text-slate-400 hover:text-gray-700 p-2 rounded-lg silver-metallic border border-gray-300 transition duration-200 active:scale-95 cursor-pointer"
         >
           <Star 
             size={15} 
-            className={starred ? "fill-yellow-400 text-yellow-400" : "transition-colors"} 
+            className={starred ? "fill-gray-700 text-gray-700" : "transition-colors"} 
           />
         </button>
 
@@ -211,7 +211,7 @@ export default function BoardHeader({ board, projectId }: BoardHeaderProps) {
                 <form onSubmit={handleInviteMember} className="space-y-3">
                   <div className="flex flex-col gap-1">
                     <label htmlFor="invite-email" className="text-[10px] font-semibold text-gray-600">
-                      Email Address <span className="text-red-500">*</span>
+                      Email Address <span className="text-gray-700">*</span>
                     </label>
                     <Input
                       id="invite-email"

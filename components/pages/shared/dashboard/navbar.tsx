@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
                 <hr className="my-1 border-gray-300" />
                 <button
                   onClick={handleLogOut}
-                  className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm text-red-600 hover:bg-red-50/60 hover:text-red-700 transition-colors cursor-pointer"
+                  className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm text-gray-700 hover:silver-btn hover:text-gray-700 transition-colors cursor-pointer"
                 >
                   <LogOut size={14} />
                   Log out

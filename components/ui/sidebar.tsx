@@ -719,7 +719,7 @@ function SidebarMenuSubItem({
           <div
             className={`
       w-[7px] h-[7px] rounded-full border ${
-        active ? "border-blue-500 bg-blue-500" : "border-slate-300 bg-slate-100"
+        active ? "border-gray-300 silver-btn" : "border-slate-300 bg-slate-100"
       } absolute ${
         hasChildren ? "top-3 translate-y-0" : "top-1/2 -translate-y-1/2"
       }`}

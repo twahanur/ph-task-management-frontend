@@ -19,13 +19,13 @@ function timeAgo(dateStr: string): string {
 }
 
 const TYPE_COLOR: Record<string, string> = {
-    card_assigned: "bg-violet-500",
+    card_assigned: "silver-btn",
     card_unassigned: "bg-slate-500",
-    card_status_changed: "bg-blue-500",
-    card_commented: "bg-emerald-500",
-    card_due_soon: "bg-amber-500",
-    member_added: "bg-teal-500",
-    member_removed: "bg-rose-500",
+    card_status_changed: "silver-btn",
+    card_commented: "silver-btn",
+    card_due_soon: "silver-btn",
+    member_added: "silver-btn",
+    member_removed: "silver-btn",
 };
 
 export default function NotificationBell() {
@@ -85,7 +85,7 @@ export default function NotificationBell() {
             >
                 <Bell size={20} />
                 {unreadCount > 0 && (
-                    <span className="absolute top-1 right-1 min-w-[16px] h-[16px] px-1 flex items-center justify-center bg-rose-500 text-white text-[9px] font-bold rounded-full leading-none shadow">
+                    <span className="absolute top-1 right-1 min-w-[16px] h-[16px] px-1 flex items-center justify-center silver-btn text-white text-[9px] font-bold rounded-full leading-none shadow">
                         {unreadCount > 99 ? "99+" : unreadCount}
                     </span>
                 )}
@@ -104,7 +104,7 @@ export default function NotificationBell() {
                             <Bell size={15} className="text-gray-500" />
                             <span className="font-semibold text-sm text-gray-800">Notifications</span>
                             {unreadCount > 0 && (
-                                <span className="bg-red-50 text-red-650 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                                <span className="silver-btn text-red-650 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
                                     {unreadCount} unread
                                 </span>
                             )}
@@ -114,7 +114,7 @@ export default function NotificationBell() {
                                 <button
                                     onClick={markAllRead}
                                     title="Mark all as read"
-                                    className="p-1.5 rounded-lg text-gray-400 hover:text-emerald-600 hover:bg-gray-200/50 transition cursor-pointer"
+                                    className="p-1.5 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-200/50 transition cursor-pointer"
                                 >
                                     <CheckCheck size={15} />
                                 </button>
@@ -123,7 +123,7 @@ export default function NotificationBell() {
                                 <button
                                     onClick={handleDeleteAll}
                                     title="Clear all"
-                                    className="p-1.5 rounded-lg text-gray-400 hover:text-rose-600 hover:bg-gray-200/50 transition cursor-pointer"
+                                    className="p-1.5 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-200/50 transition cursor-pointer"
                                 >
                                     <Trash2 size={15} />
                                 </button>
@@ -154,7 +154,7 @@ export default function NotificationBell() {
 
                         {!isLoadingNotifications &&
                             notifications.map((n) => {
-                                const dot = TYPE_COLOR[n.type] || "bg-blue-500";
+                                const dot = TYPE_COLOR[n.type] || "silver-btn";
                                 return (
                                     <div
                                         key={n.id}
@@ -193,7 +193,7 @@ export default function NotificationBell() {
                                                 <button
                                                     onClick={(e) => handleMarkRead(n.id, e)}
                                                     title="Mark as read"
-                                                    className="p-1 rounded text-gray-400 hover:text-emerald-600 hover:bg-gray-200/50 transition cursor-pointer"
+                                                    className="p-1 rounded text-gray-400 hover:text-gray-700 hover:bg-gray-200/50 transition cursor-pointer"
                                                 >
                                                     <Check size={13} />
                                                 </button>
@@ -202,7 +202,7 @@ export default function NotificationBell() {
                                                 onClick={(e) => handleDelete(n.id, e)}
                                                 disabled={deletingId === n.id}
                                                 title="Delete"
-                                                className="p-1 rounded text-gray-400 hover:text-rose-600 hover:bg-gray-200/50 transition cursor-pointer disabled:opacity-40"
+                                                className="p-1 rounded text-gray-400 hover:text-gray-700 hover:bg-gray-200/50 transition cursor-pointer disabled:opacity-40"
                                             >
                                                 <Trash2 size={13} />
                                             </button>

@@ -27,7 +27,7 @@ export function InputType({
     <div className="space-y-2 w-full">
       <label className="text-text-secondary">
         {label}
-        {required && <span className="text-red-500 ml-1">*</span>}
+        {required && <span className="text-gray-700 ml-1">*</span>}
       </label>
 
       <input
@@ -37,11 +37,11 @@ export function InputType({
           required: required ? `${label} is required` : false,
         })}
         className={`bg-white/10 border border-[#404040] py-2 px-4 w-full placeholder:text-text-secondary placeholder:text-sm rounded-xl outline-none
-          ${hasError ? "border border-red-500" : ""}`}
+          ${hasError ? "border border-gray-300" : ""}`}
       />
 
       {hasError && (
-        <p className="text-sm text-red-500">{String(hasError.message)}</p>
+        <p className="text-sm text-gray-700">{String(hasError.message)}</p>
       )}
     </div>
   );
