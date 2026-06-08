@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-
 import { Button } from "@/components/ui/button";
 import ButtonComponent from "@/components/ui/ButtonComponent";
 import {
@@ -33,12 +32,11 @@ export default function Navbar() {
   const router = useRouter();
   const { user, setIsLoading, setUser, isLoading } = useUser();
 
-
   const handleLogOut = async () => {
     const toastId = toast.loading("logging out", { duration: 3000 });
     try {
       const res = await logout();
-      console.log("logut res-->>> ",res)
+      console.log("logut res-->>> ", res);
       if (res.success) {
         setIsLoading(true);
         setUser(null);
@@ -58,10 +56,10 @@ export default function Navbar() {
   };
 
   const NavLinks = [
-    { title: "Plans", path: "/plans" },
-    { title: "Solutions", path: "/solutions" },
-    { title: "Pricing", path: "/pricing" },
-    { title: "Resources", path: "/resources" },
+    // { title: "Plans", path: "/plans" },
+    // { title: "Solutions", path: "/solutions" },
+    // { title: "Pricing", path: "/pricing" },
+    // { title: "Resources", path: "/resources" },
   ];
 
   return (
@@ -81,11 +79,13 @@ export default function Navbar() {
             href="/"
             className="text-yellow-400 font-bold text-xl flex items-center gap-2"
           >
-            <span className="text-white font-extrabold tracking-wider">PH <span className="text-violet-500">TASKS</span></span>
+            <span className="text-white font-extrabold tracking-wider">
+              PH <span className="text-violet-500">TASKS</span>
+            </span>
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
+          {/* <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             {NavLinks.map((link) => (
               <li key={link.path}>
                 <Link
@@ -99,7 +99,7 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-2">
@@ -115,12 +115,14 @@ export default function Navbar() {
               >
                 <SheetHeader className="text-left pt-6 px-8 mb-4">
                   <SheetTitle>
-                    <span className="text-white font-extrabold tracking-wider">PH <span className="text-violet-500">TASKS</span></span>
+                    <span className="text-white font-extrabold tracking-wider">
+                      PH <span className="text-violet-500">TASKS</span>
+                    </span>
                   </SheetTitle>
                 </SheetHeader>
 
                 <div className="flex flex-col gap-6 px-8 mt-4 overflow-y-auto flex-1">
-                  <div className="flex flex-col gap-4">
+                  {/* <div className="flex flex-col gap-4">
                     {NavLinks.map((link) => (
                       <Link
                         key={link.path}
@@ -135,7 +137,7 @@ export default function Navbar() {
                         {link.title}
                       </Link>
                     ))}
-                  </div>
+                  </div> */}
 
                   <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
                     {isLoading ? (

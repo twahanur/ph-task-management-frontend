@@ -205,7 +205,7 @@
 .silver-input {
   background: linear-gradient(145deg, #d1d6dc, #eef2f5);
   border: 1px solid #9ca3af;
-  box-shadow: 
+  box-shadow:
     inset 1px 2px 4px rgba(0, 0, 0, 0.15),
     0px 1px 1px rgba(255, 255, 255, 0.5);
   color: #1f2937;
@@ -218,15 +218,15 @@
 .silver-input:focus {
   outline: none;
   border-color: #4b5563;
-  box-shadow: 
-    inset 1px 2px 4px rgba(0, 0, 0, 0.2), 
+  box-shadow:
+    inset 1px 2px 4px rgba(0, 0, 0, 0.2),
     0 0 0 1px #4b5563;
 }
 
 .silver-btn {
   background: linear-gradient(180deg, #f3f4f6 0%, #9ca3af 100%);
   border: 1px solid #4b5563;
-  box-shadow: 
+  box-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.15),
     inset 0px 1px 1px rgba(255, 255, 255, 0.6);
   color: #111827;
@@ -268,7 +268,7 @@
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.3) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -300,15 +300,33 @@
 }
 
 @keyframes ring {
-  0% { transform: rotate(0); }
-  10% { transform: rotate(15deg); }
-  20% { transform: rotate(-15deg); }
-  30% { transform: rotate(10deg); }
-  40% { transform: rotate(-10deg); }
-  50% { transform: rotate(5deg); }
-  60% { transform: rotate(-5deg); }
-  70% { transform: rotate(0); }
-  100% { transform: rotate(0); }
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .animate-ring {
